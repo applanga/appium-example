@@ -37,10 +37,39 @@ console.log("Start Session");
 
 	await enableDraftMode(client);
 
+	await showScreenshotMenu(client);
 	//var selector = 'android=new UiSelector().resourceId(\"com.applanga.applangaandroidtest:id/main_activity_button_show_activity\").className(\"android.widget.Button\")';
 	//const button = await client.$(selector);
 	//button.click();
 
+	await selectTag(client,"test");
+
+	await client.pause(10000)
+
+
+}
+
+async function selectTag(client,tag)
+{
+	
+	var list = await getElement(client,"applanga_spinner_screentag_select","android.widget.Spinner");
+
+	log("Got List?");
+
+	log(list);
+
+	list.scrollToExact("test");
+
+}
+
+async function showScreenshotMenu(client)
+{
+	client.touchPerform([
+	  { action: 'press', options: { x: 500, y: 500, count: 2 }},
+	  { action: 'moveTo', options: { x: 500, y: 200}},
+	  { action: 'release' }
+	]);
+	await client.pause(1000);
 
 }
 
@@ -50,11 +79,12 @@ async function enableDraftMode(client)
 	  {action: 'press',options: {x: 500,y: 500}},
 	  {action: 'wait',options: {ms: 6000}},
 	  { action: 'release' }
+
 	]);	
 
 	await client.pause(6000);
 
-	var passwordEditText = await getElement(client,"applanga_password","android.widget.EditText");
+	var passwordEditText = await getElement(client,"applanga_password");
 
 	await client.pause(1000);
 
@@ -66,22 +96,22 @@ async function enableDraftMode(client)
 
 	log("Click Ok button");
 
-	var okButton = await getElement(client,"applanga_button_ok","android.widget.Button");
+	var okButton = await getElement(client,"applanga_button_ok");
 
 	await okButton.click();
 
 	log("Click Ok button");
 
-	await client.pause(5000);
+	await client.pause(3000);
 
 	log("App Should be restarted by now");
 
 
 }
 
-async function getElement(client,id,className)
+async function getElement(client,id)
 {
-	var selector = 'android=new UiSelector().resourceId(\"com.example.appiumtestapp:id/' + id + '\").className(\"' + className + '\")';
+	var selector = 'android=new UiSelector().resourceId(\"com.example.appiumtestapp:id/' + id + '\")';
 	log("USING SELECTOR: " + selector);
 	return await client.$(selector);
 }
