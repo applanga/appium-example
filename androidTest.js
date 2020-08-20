@@ -26,22 +26,15 @@ async function main () {
 
 
 console.log("Start Session");
-
-	log("starting Screenshot uploads");
 	
 	var client = await wdio.remote(opts);
 
 	await client.pause(1000)
 
-	log("Enabling Draft Mode tests");
-
 	await enableDraftMode(client);
 
 	await showScreenshotMenu(client);
-	//var selector = 'android=new UiSelector().resourceId(\"com.applanga.applangaandroidtest:id/main_activity_button_show_activity\").className(\"android.widget.Button\")';
-	//const button = await client.$(selector);
-	//button.click();
-
+	
 	await selectTag(client,"test");
 
 	await client.pause(10000)
@@ -52,13 +45,11 @@ console.log("Start Session");
 async function selectTag(client,tag)
 {
 	
-	var list = await getElement(client,"applanga_spinner_screentag_select","android.widget.Spinner");
+	await client.pause(1000)
 
-	log("Got List?");
+	let source = await client.getPageSource();
 
-	log(list);
-
-	list.scrollToExact("test");
+	log(source);
 
 }
 
@@ -69,7 +60,7 @@ async function showScreenshotMenu(client)
 	  { action: 'moveTo', options: { x: 500, y: 200}},
 	  { action: 'release' }
 	]);
-	await client.pause(1000);
+	await client.pause(2000);
 
 }
 
@@ -88,23 +79,15 @@ async function enableDraftMode(client)
 
 	await client.pause(1000);
 
-	log("Enter the draft mode key");
-
 	passwordEditText.addValue("86f8");
 
 	await client.pause(1000);
-
-	log("Click Ok button");
 
 	var okButton = await getElement(client,"applanga_button_ok");
 
 	await okButton.click();
 
-	log("Click Ok button");
-
 	await client.pause(3000);
-
-	log("App Should be restarted by now");
 
 
 }
