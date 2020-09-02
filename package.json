@@ -11,6 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "appium-uiautomator2-driver": "^1.57.0",
+    "appium-xcuitest-driver": "^3.25.2",
+    "webdriver": "^6.4.5",
     "webdriverio": "^6.4.0"
   }
 }
