@@ -8,17 +8,6 @@ const SELECTORS = {
 
 const packageAttribute = 'com.applanga.applangaandroidtest:id/';
 
-const opts = {
-  path: '/wd/hub',
-  port: 4723,
-  capabilities: {
-    platformName: "iOS",
-    platformVersion: "13.6",
-    deviceName: "iPhone 8",
-    app: "/Users/richard/Library/Developer/Xcode/DerivedData/AppiumTestIos-ghgmanachghzhlaavfsenaygacye/Build/Products/Debug-iphonesimulator/AppiumTestIos.app",
-    automationName: "XCUITest"
-  }
-};
 
 var client
 
@@ -26,13 +15,15 @@ async function main () {
 
 	console.log("Start Session");
 	
-	client = await wdio.remote(opts);
+	await connectClient(false)
 
 	await client.pause(1000)
 
+	await logStatus()
+
 	await enableDraftMode()
 
-	//await showScreenshotMenu();
+	await showScreenshotMenu();
 	
 	//await selectTag("test");
 
@@ -41,57 +32,114 @@ async function main () {
 
 }
 
+async function connectClient(noReset)
+{
+	let opts = {
+		path: '/wd/hub',
+		port: 4723,
+		capabilities: {
+			platformName: "iOS",
+			platformVersion: "13.6",
+			deviceName: "iPhone 8",
+			app: "/Users/richard/Library/Developer/Xcode/DerivedData/AppiumTestIos-ghgmanachghzhlaavfsenaygacye/Build/Products/Debug-iphonesimulator/AppiumTestIos.app",
+			automationName: "XCUITest",
+			noReset: noReset
+		}
+	};
+	client = await wdio.remote(opts);
+}
+
 async function enableDraftMode() 
 {
 
- 	// client.touchAction([
-  //       [{action: 'press', x: 100, y: 10}, {action: 'wait',options: {ms: 5000}}, 'release'],
-  //       [{action: 'press', x: 300, y: 10}, {action: 'wait',options: {ms: 5000}}, 'release']
-  //   ])
+	//await client.executeScript("mobile: touchAndHold", [{x:100,y:100, duration:5 }]);
 
-
-	await client.executeScript("mobile: touchAndHold", [{x:100,y:100, duration:5 }]);
-
-	log("should show the dialog now")
+await client.performActions([{
+    "type": "pointer",
+    "id": "finger1",
+    "parameters": {"pointerType": "touch"},
+    "actions": [
+        {"type": "pointerMove", "duration": 0, "x": 100, "y": 300},
+        {"type": "pointerDown", "button": 0},
+        {"type": "pause", "duration": 5000},
+        {"type": "pointerUp", "button": 0}
+    ]
+}, {
+    "type": "pointer",
+    "id": "finger2",
+    "parameters": {"pointerType": "touch"},
+    "actions": [
+        {"type": "pointerMove", "duration": 0, "x": 300, "y": 300},
+        {"type": "pointerDown", "button": 0},
+        {"type": "pause", "duration": 5000},
+        {"type": "pointerUp", "button": 0}
+    ]
+}]);
 
 	await client.pause(500)
 
-	
-
 	let keyInput = await client.$("~DraftModeKeyInput")
 
-	log("Got Key Input?")
-
-	log(keyInput)
-
-
-	await client.pause(1000);
+	await client.pause(500);
 
     keyInput.addValue("86f8");
 
-
-	await client.pause(1000);
-
+	await client.pause(500);
 
 	let okButton = await client.$("~OK")
 
-	log("Got ok button?")
-
-	log(okButton)
-
-	await client.pause(1000);
-
 	await okButton.click();
 
-	await client.pause(3000);
+	await client.pause(2000);
 
-	reopenApp()
+	await reopenApp()
 
 }
 
 async function reopenApp()
 {
-	await client.activateApp("applanga.AppiumTestIos")
+	//await client.activateApp("applanga.AppiumTestIos")
+	await connectClient(true)
+	await client.pause(2000)
+
+	await logStatus()
+}
+
+async function logStatus()
+{
+	let status = await client.status()
+	log(status)
+}
+
+async function showScreenshotMenu()
+{
+ 	await client.performActions([{
+    "type": "pointer",
+    "id": "finger1",
+    "parameters": {"pointerType": "touch"},
+    "actions": [
+        {"type": "pointerMove", "duration": 0, "x": 100, "y": 300},
+        {"type": "pointerDown", "button": 0},
+       // {"type": "pause", "duration": 500},
+        {"type": "pointerMove", "duration": 500,"origin": "pointer", "x": 100, "y": 0},
+        {"type": "pointerUp", "button": 0}
+    ]
+}, {
+    "type": "pointer",
+    "id": "finger2",
+    "parameters": {"pointerType": "touch"},
+    "actions": [
+        {"type": "pointerMove", "duration": 0, "x": 300, "y": 300},
+        {"type": "pointerDown", "button": 0},
+        //{"type": "pause", "duration": 500},
+        {"type": "pointerMove", "duration": 500, "origin": "pointer", "x": 300, "y": 0},
+        {"type": "pointerUp", "button": 0}
+    ]
+}]);
+ 	
+	await client.pause(3000);
+	//await client.releaseActions();
+	logPage()
 }
 
 async function selectTag(tag)
@@ -100,19 +148,6 @@ async function selectTag(tag)
 	await client.pause(1000)
 
 	let source = await client.getPageSource();
-
-	log(source);
-
-}
-
-async function showScreenshotMenu()
-{
-	client.touchPerform([
-	  { action: 'press', options: { x: 500, y: 500, count: 2 }},
-	  { action: 'moveTo', options: { x: 500, y: 200}},
-	  { action: 'release' }
-	]);
-	await client.pause(2000);
 
 }
 
