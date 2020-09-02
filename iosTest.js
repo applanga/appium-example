@@ -118,10 +118,10 @@ async function showScreenshotMenu()
     "id": "finger1",
     "parameters": {"pointerType": "touch"},
     "actions": [
-        {"type": "pointerMove", "duration": 0, "x": 100, "y": 300},
+        {"type": "pointerMove", "duration": 0, "x": 100, "y": 100},
         {"type": "pointerDown", "button": 0},
-       // {"type": "pause", "duration": 500},
-        {"type": "pointerMove", "duration": 500,"origin": "pointer", "x": 100, "y": 0},
+        {"type": "pause", "duration": 500},
+        {"type": "pointerMove", "duration": 500,"origin": "pointer", "x": 0, "y": -200},
         {"type": "pointerUp", "button": 0}
     ]
 }, {
@@ -129,10 +129,10 @@ async function showScreenshotMenu()
     "id": "finger2",
     "parameters": {"pointerType": "touch"},
     "actions": [
-        {"type": "pointerMove", "duration": 0, "x": 300, "y": 300},
+        {"type": "pointerMove", "duration": 0, "x": 300, "y": 100},
         {"type": "pointerDown", "button": 0},
-        //{"type": "pause", "duration": 500},
-        {"type": "pointerMove", "duration": 500, "origin": "pointer", "x": 300, "y": 0},
+        {"type": "pause", "duration": 500},
+        {"type": "pointerMove", "duration": 500, "origin": "pointer", "x": 0, "y": -200},
         {"type": "pointerUp", "button": 0}
     ]
 }]);
