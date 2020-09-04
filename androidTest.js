@@ -6,6 +6,7 @@ const SELECTORS = {
 };
 
 const packageAttribute = 'com.applanga.applangaandroidtest:id/';
+var client
 
 const opts = {
   path: '/wd/hub',
@@ -14,7 +15,7 @@ const opts = {
     platformName: "Android",
     platformVersion: "9",
     deviceName: "Pixel_3_API_28",
-    app: "/Users/richard/Documents/appium-example/builds/android.apk",
+    app: __dirname + "/TestingApps/AppiumTestAppAndroid/app/build/outputs/apk/debug/app-debug.apk",
     appPackage: "com.example.appiumtestapp",
     appActivity: "com.example.appiumtestapp.MainActivity",
     automationName: "UiAutomator2"
@@ -27,63 +28,110 @@ async function main () {
 
 console.log("Start Session");
 	
-	var client = await wdio.remote(opts);
+	client = await wdio.remote(opts)
 
 	await client.pause(1000)
 
-	await enableDraftMode(client);
+	await enableDraftMode()
 
-	await showScreenshotMenu(client);
+	await showScreenshotMenu()
 	
-	await selectTag(client,"test");
+	await takeScreenshotWithTag("page-1");
+
+	await hideScreenshotMenu()
+
+	await openSecondView()
+
+	await showScreenshotMenu()
+
+	await takeScreenshotWithTag("page-2");
+
+	await hideScreenshotMenu()
 
 	await client.pause(10000)
 
 
 }
 
-async function selectTag(client,tag)
+async function openSecondView()
+{
+	logPage();
+	let label = await getElement("textView")
+
+	label.click()
+
+	await client.pause(1000)
+}
+
+async function takeScreenshotWithTag(tag)
 {
 	
-	await client.pause(1000)
+	await client.pause(500)
 
-	let source = await client.getPageSource();
+	let tagSelect = await getElement("applanga_spinner_screentag_select")
 
-	log(source);
+	tagSelect.click()
+
+	await client.pause(500)
+
+	const tagItem = await client.$('android=new UiSelector().text(\"' + tag +'\")')
+	tagItem.click()
+
+	await client.pause(500)
+
+	let captureScreenbutton = await getElement("applanga_button_capture_screen")
+
+	await captureScreenbutton.click()
+
+	await client.pause(500)
+
 
 }
 
-async function showScreenshotMenu(client)
+async function showScreenshotMenu()
 {
+	await client.pause(500);
 	client.touchPerform([
-	  { action: 'press', options: { x: 500, y: 500, count: 2 }},
-	  { action: 'moveTo', options: { x: 500, y: 200}},
+	  { action: 'press', options: { x: 0, y: 500 }},
+	  { action: 'moveTo', options: { x: 0, y: 200}},
 	  { action: 'release' }
 	]);
-	await client.pause(2000);
+	await client.pause(500);
 
 }
 
-async function enableDraftMode(client) 
+async function hideScreenshotMenu()
 {
+	await client.pause(500);
 	client.touchPerform([
-	  {action: 'press',options: {x: 500,y: 500}},
+	  { action: 'press', options: { x: 0, y: 500 }},
+	  { action: 'moveTo', options: { x: 0, y: -200}},
+	  { action: 'release' }
+	]);
+	await client.pause(500);
+
+}
+
+async function enableDraftMode() 
+{
+	await client.touchPerform([
+	  {action: 'press',options: {x: 10,y: 100}},
 	  {action: 'wait',options: {ms: 6000}},
 	  { action: 'release' }
 
 	]);	
 
-	await client.pause(6000);
-
-	var passwordEditText = await getElement(client,"applanga_password");
-
 	await client.pause(1000);
+
+	var passwordEditText = await getElement("applanga_password");
+
+	await client.pause(500);
 
 	passwordEditText.addValue("86f8");
 
-	await client.pause(1000);
+	await client.pause(500);
 
-	var okButton = await getElement(client,"applanga_button_ok");
+	var okButton = await getElement("applanga_button_ok");
 
 	await okButton.click();
 
@@ -92,7 +140,7 @@ async function enableDraftMode(client)
 
 }
 
-async function getElement(client,id)
+async function getElement(id)
 {
 	var selector = 'android=new UiSelector().resourceId(\"com.example.appiumtestapp:id/' + id + '\")';
 	log("USING SELECTOR: " + selector);
@@ -102,6 +150,11 @@ async function getElement(client,id)
 function log(msg)
 {
 	console.log(msg);
+}
+
+function logPage()
+{
+	log(client.getPageSource())
 }
 
 main();
