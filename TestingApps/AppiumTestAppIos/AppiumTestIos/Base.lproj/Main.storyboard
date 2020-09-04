@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AppiumTestIos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Page 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4b-WV-k6a">
+                                <rect key="frame" x="151" y="424" width="112.5" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIT-Wg-WCP" userLabel="OpenNextView">
+                                <rect key="frame" x="109.5" y="770" width="195" height="46"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Open Next View"/>
+                                <connections>
+                                    <segue destination="bLM-jG-asv" kind="show" id="Gwq-8x-SeW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="r4b-WV-k6a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TCZ-Fc-Z6U"/>
+                            <constraint firstItem="r4b-WV-k6a" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YdW-cD-1zo"/>
+                            <constraint firstItem="jIT-Wg-WCP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ocr-Ug-0LV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jIT-Wg-WCP" secondAttribute="bottom" constant="46" id="y0w-7F-zjo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="85.714285714285708"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="aCo-H6-VYb">
+            <objects>
+                <viewController id="bLM-jG-asv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NSk-ra-Rpg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Page 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTe-kd-Stq">
+                                <rect key="frame" x="148.5" y="397" width="117" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="GTe-kd-Stq" firstAttribute="centerY" secondItem="NSk-ra-Rpg" secondAttribute="centerY" id="Gy8-IA-fv6"/>
+                            <constraint firstItem="GTe-kd-Stq" firstAttribute="centerX" secondItem="NSk-ra-Rpg" secondAttribute="centerX" id="hZs-j3-TtY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Acb-WR-rFA"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iCt-K5-giJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GOL-Me-C4N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1059" y="86"/>
+        </scene>
+    </scenes>
+</document>

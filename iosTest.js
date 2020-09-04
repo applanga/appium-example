@@ -39,7 +39,7 @@ async function connectClient(noReset)
 			platformName: "iOS",
 			platformVersion: "13.6",
 			deviceName: "iPhone 8",
-			app: "/Users/richard/Library/Developer/Xcode/DerivedData/AppiumTestIos-ghgmanachghzhlaavfsenaygacye/Build/Products/Debug-iphonesimulator/AppiumTestIos.app",
+			app: __dirname + "/TestingApps/AppiumTestAppIos/DerivedData/AppiumTestIos/Build/Products/Debug-iphonesimulator/AppiumTestIos.app",
 			automationName: "XCUITest",
 			noReset: noReset
 		}
