@@ -22,11 +22,7 @@ android {
     }
 }
 repositories {
-    def releaseRepositoryPath = file('/Users/richard/Documents/ApplangaSDK/sdk/android/sdk-android/maven/releases')
-    maven {
-        url "file://${releaseRepositoryPath.absolutePath}"
-
-    }
+    maven { url 'https://maven.applanga.com/'}
     maven { url 'https://jitpack.io' }
 }
 dependencies {
@@ -39,6 +35,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    implementation 'com.applanga.android:Applanga:3.0.999'
+    implementation 'com.applanga.android:Applanga:3.0.135'
 
 }
