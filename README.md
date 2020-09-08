@@ -56,6 +56,8 @@ b: Open the repo directory in command line
 
 c: make sure the appium server (standalone or command line ) is running and then run 'node androidTest.js'
 
+NOTE: the first time you run the android tests, you will have to manually give the test app permission to draw over other apps. Once you do this you can restart the tests and you will not have ot do it again.
+
 ## Important things to know before writing your own tests
 
 ### iOS
