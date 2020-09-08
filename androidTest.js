@@ -1,14 +1,5 @@
 const wdio = require("webdriverio");
-const assert = require("assert");
-
-const SELECTORS = {
-    LOGIN_SCREEN: '~Login-screen'
-};
-
-const packageAttribute = 'com.applanga.applangaandroidtest:id/';
-
 const applanga = require("applangaappiumutils");
-
 
 var client
 

@@ -1,8 +1,4 @@
-
 const wdio = require("webdriverio");
-const assert = require("assert");
-
-const packageAttribute = 'com.applanga.applangaandroidtest:id/';
 const applanga = require("applangaappiumutils");
 
 
