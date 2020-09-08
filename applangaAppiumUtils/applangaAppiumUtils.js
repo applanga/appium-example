@@ -183,14 +183,10 @@ async function hideScreenshotMenuAndroid(client)
 
 }
 
-
-
 async function getElement(client,id)
 {
 	var selector = 'android=new UiSelector().resourceId(\"' + androidPackage + ':id/' + id + '\")';
 	return await client.$(selector);
 }
-
-
 
 module.exports = {enableDraftModeIos,takeScreenshotWithTagIos,enableDraftModeAndroid,takeScreenshotWithTagAndroid};

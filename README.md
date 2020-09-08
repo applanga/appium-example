@@ -65,7 +65,13 @@ After applanga draft mode has been successfully enabled in iOS, it is important 
 
 Note: This process is handled automatically when writing tests for Android.
 
+### Language switching 
 
+To switch languages and you can provide a language code within the capabilities object when creating your testing session like so 'language: "de"'.
+
+This works well on iOS and could be used to write a single testing script to take screenshots for an entire app in many languages. 
+
+It does not seem to work for Android. If you find a way to get it working please let us know!
 
 
 

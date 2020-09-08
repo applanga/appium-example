@@ -26,6 +26,7 @@ async function connectClient(noReset)
 		path: '/wd/hub',
 		port: 4723,
 		capabilities: {
+			language: "en",
 			platformName: "iOS",
 			platformVersion: "13.6",
 			deviceName: "iPhone 8",

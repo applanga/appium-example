@@ -7,7 +7,6 @@ const opts = {
   path: '/wd/hub',
   port: 4723,
   capabilities: {
-  	appLocal: {"language": "de", "country": "de"},
     platformName: "Android",
     platformVersion: "9",
     deviceName: "Pixel_3_API_28",

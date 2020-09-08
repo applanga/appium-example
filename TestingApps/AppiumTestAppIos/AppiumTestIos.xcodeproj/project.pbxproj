@@ -8,17 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		70AE57221999D7E1E53D78BF /* Pods_AppiumTestIos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8163B8465A628A6807726CD /* Pods_AppiumTestIos.framework */; };
+		790E4A0925076F2F00F51606 /* applanga_settings.applanga in Resources */ = {isa = PBXBuildFile; fileRef = 790E4A0825076F2F00F51606 /* applanga_settings.applanga */; };
 		79475C1A24EFB84D008D5AAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79475C1924EFB84D008D5AAD /* AppDelegate.swift */; };
 		79475C1C24EFB84D008D5AAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79475C1B24EFB84D008D5AAD /* SceneDelegate.swift */; };
 		79475C1E24EFB84D008D5AAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79475C1D24EFB84D008D5AAD /* ViewController.swift */; };
 		79475C2124EFB84D008D5AAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79475C1F24EFB84D008D5AAD /* Main.storyboard */; };
 		79475C2324EFB84F008D5AAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79475C2224EFB84F008D5AAD /* Assets.xcassets */; };
 		79475C2624EFB84F008D5AAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79475C2424EFB84F008D5AAD /* LaunchScreen.storyboard */; };
-		79475C2E24EFB963008D5AAD /* applanga_settings.applanga in Resources */ = {isa = PBXBuildFile; fileRef = 79475C2D24EFB963008D5AAD /* applanga_settings.applanga */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		09800FB0348E37C729C201DE /* Pods-AppiumTestIos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppiumTestIos.release.xcconfig"; path = "Target Support Files/Pods-AppiumTestIos/Pods-AppiumTestIos.release.xcconfig"; sourceTree = "<group>"; };
+		790E4A0825076F2F00F51606 /* applanga_settings.applanga */ = {isa = PBXFileReference; lastKnownFileType = file; path = applanga_settings.applanga; sourceTree = "<group>"; };
 		79475C1624EFB84D008D5AAD /* AppiumTestIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppiumTestIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79475C1924EFB84D008D5AAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79475C1B24EFB84D008D5AAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,7 +28,6 @@
 		79475C2224EFB84F008D5AAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79475C2524EFB84F008D5AAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79475C2724EFB84F008D5AAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		79475C2D24EFB963008D5AAD /* applanga_settings.applanga */ = {isa = PBXFileReference; lastKnownFileType = file; path = applanga_settings.applanga; sourceTree = "<group>"; };
 		A8163B8465A628A6807726CD /* Pods_AppiumTestIos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppiumTestIos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA8079116FF4007F3D4BFE13 /* Pods-AppiumTestIos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppiumTestIos.debug.xcconfig"; path = "Target Support Files/Pods-AppiumTestIos/Pods-AppiumTestIos.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,7 +65,7 @@
 		79475C1824EFB84D008D5AAD /* AppiumTestIos */ = {
 			isa = PBXGroup;
 			children = (
-				79475C2D24EFB963008D5AAD /* applanga_settings.applanga */,
+				790E4A0825076F2F00F51606 /* applanga_settings.applanga */,
 				79475C1924EFB84D008D5AAD /* AppDelegate.swift */,
 				79475C1B24EFB84D008D5AAD /* SceneDelegate.swift */,
 				79475C1D24EFB84D008D5AAD /* ViewController.swift */,
@@ -154,7 +154,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79475C2E24EFB963008D5AAD /* applanga_settings.applanga in Resources */,
+				790E4A0925076F2F00F51606 /* applanga_settings.applanga in Resources */,
 				79475C2624EFB84F008D5AAD /* LaunchScreen.storyboard in Resources */,
 				79475C2324EFB84F008D5AAD /* Assets.xcassets in Resources */,
 				79475C2124EFB84D008D5AAD /* Main.storyboard in Resources */,
