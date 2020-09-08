@@ -69,11 +69,15 @@ Note: This process is handled automatically when writing tests for Android.
 
 ### Language switching 
 
+#### iOS
+
 To switch languages and you can provide a language code within the capabilities object when creating your testing session like so 'language: "de"'.
 
-This works well on iOS and could be used to write a single testing script to take screenshots for an entire app in many languages. 
+#### Android
 
-It does not seem to work for Android. If you find a way to get it working please let us know!
+The same goes for android, but you must specify both the local and language, like so 
+
+locale: "DE",language: "de"
 
 
 
