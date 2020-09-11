@@ -12,7 +12,7 @@ async function connectClient(noReset)
       platformName: "Android",
       platformVersion: "9",
       deviceName: "Pixel_3_API_28",
-      app: __dirname + "/TestingApps/AppiumTestFlutterAndroid/build/app/outputs/apk/release/app-release.apk",
+      app: __dirname + "/TestingApps/AppiumTestAppFlutter/build/app/outputs/apk/release/app-release.apk",
       appPackage: "com.applanga.applanga_flutter_test_app",
       automationName: "UiAutomator2",
       noReset: noReset
