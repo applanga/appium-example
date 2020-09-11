@@ -1,5 +1,8 @@
 package com.exampleapp;
 
+import android.view.MotionEvent;
+
+import com.applanga.android.Applanga;
 import com.facebook.react.ReactActivity;
 
 public class MainActivity extends ReactActivity {
@@ -11,5 +14,11 @@ public class MainActivity extends ReactActivity {
     @Override
     protected String getMainComponentName() {
         return "ExampleApp";
+    }
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        Applanga.dispatchTouchEvent(ev, this);
+        return super.dispatchTouchEvent(ev);
     }
 }
