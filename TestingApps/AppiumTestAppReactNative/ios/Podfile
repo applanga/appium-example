@@ -77,7 +77,7 @@ target 'ExampleApp' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
-  pod 'Applanga', '>= 2.0.107'
+  pod 'Applanga', :path=>'/Users/richard/Documents/ApplangaSDK/sdk/ios/applanga'
   pod 'ApplangaReactNative', :path => '../node_modules/applanga-react-native/ios/ApplangaReactNative.podspec'
 
 

@@ -1,5 +1,5 @@
 PODS:
-  - Applanga (2.0.136)
+  - Applanga (2.0.65)
   - ApplangaReactNative (0.0.12):
     - Applanga
     - React
@@ -298,12 +298,14 @@ PODS:
     - React-cxxreact (= 0.62.2)
     - React-jsi (= 0.62.2)
     - ReactCommon/callinvoker (= 0.62.2)
+  - RNI18n (2.0.15):
+    - React
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
 
 DEPENDENCIES:
-  - Applanga (>= 2.0.107)
+  - Applanga (from `/Users/richard/Documents/ApplangaSDK/sdk/ios/applanga`)
   - ApplangaReactNative (from `../node_modules/applanga-react-native/ios/ApplangaReactNative.podspec`)
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
@@ -352,11 +354,11 @@ DEPENDENCIES:
   - React-RCTVibration (from `../node_modules/react-native/Libraries/Vibration`)
   - ReactCommon/callinvoker (from `../node_modules/react-native/ReactCommon`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
+  - RNI18n (from `../node_modules/react-native-i18n`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
   trunk:
-    - Applanga
     - boost-for-react-native
     - CocoaAsyncSocket
     - CocoaLibEvent
@@ -371,6 +373,8 @@ SPEC REPOS:
     - YogaKit
 
 EXTERNAL SOURCES:
+  Applanga:
+    :path: "/Users/richard/Documents/ApplangaSDK/sdk/ios/applanga"
   ApplangaReactNative:
     :path: "../node_modules/applanga-react-native/ios/ApplangaReactNative.podspec"
   DoubleConversion:
@@ -423,11 +427,13 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/Libraries/Vibration"
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
+  RNI18n:
+    :path: "../node_modules/react-native-i18n"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
-  Applanga: 57407ee5eed0c670af930091e18fea2d4bc3180a
+  Applanga: aec546c9c7ad92adf08ac6d809051f09c2e240fe
   ApplangaReactNative: 3f0d6ddd5d1abf82722323dfaeb173d5a46376c9
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
   CocoaAsyncSocket: 694058e7c0ed05a9e217d1b3c7ded962f4180845
@@ -465,9 +471,10 @@ SPEC CHECKSUMS:
   React-RCTText: fae545b10cfdb3d247c36c56f61a94cfd6dba41d
   React-RCTVibration: 4356114dbcba4ce66991096e51a66e61eda51256
   ReactCommon: ed4e11d27609d571e7eee8b65548efc191116eb3
+  RNI18n: e2f7e76389fcc6e84f2c8733ea89b92502351fd8
   Yoga: 3ebccbdd559724312790e7742142d062476b698e
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: e5b41a464770e7d28ec06ed77ee5ae273c2a2911
+PODFILE CHECKSUM: b8476e81468b9cfe886ece6c79c426898e6bb086
 
 COCOAPODS: 1.9.0
