@@ -14,6 +14,6 @@
     "appium-xcuitest-driver": "^3.25.2",
     "applangaappiumutils": "file:applangaAppiumUtils",
     "webdriver": "^6.4.5",
-    "webdriverio": "^6.4.0"
+    "webdriverio": "^6.4.7"
   }
 }

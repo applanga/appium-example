@@ -1,0 +1,15 @@
+{
+  "name": "nosdkexample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "androidScreenShots.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fast-xml-parser": "^3.17.4",
+    "xml2js": "^0.4.23"
+  }
+}
