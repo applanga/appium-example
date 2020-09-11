@@ -81,5 +81,10 @@ locale: "DE",language: "de"
 
 
 
+## React Native and Flutter support
+Within this repo you will also find example scripts and testing apps for apps made with react-native and flutter.
+
+The Applanga android and ios tools work for these apps as well. You can refer to the example testing scripts provided to see some simple examples.
+
 
 
