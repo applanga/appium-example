@@ -3,12 +3,16 @@ var client
 var request = require('request');
 var parseString = require('xml2js').parseString;
 var fs = require('fs');
-var FormData = require('form-data');
+
+const languageToUse = "de"
+const localeToUse = "DE"
 
 const opts = {
   path: '/wd/hub',
   port: 4723,
   capabilities: {
+    locale: languageToUse,
+    language: localeToUse,
     platformName: "Android",
     platformVersion: "9",
     deviceName: "Pixel_3_API_28",
@@ -20,24 +24,17 @@ const opts = {
 };
 
 const apiToken = "Bearer 5f5f213bbc978a30dbfb7073!fc1794d1e6a2b5a411c98ff016ba56c6"
-
 const apiUrl = "https://api.applanga.com/v1/api/screenshots?app=5f5f213bbc978a30dbfb7073"
 
 async function main () {
-	
-	client = await wdio.remote(opts)
-
+   
+	 client = await wdio.remote(opts)
     let xml = await getPage()
-
     parseString(xml, function (err, result) {
         let allTexts = getTexts(result)
         uploadTextPositions(allTexts)
     });
-
-    
-
 	await client.pause(3000)
-
 }
 
 async function uploadTextPositions(allTexts)
@@ -48,27 +45,18 @@ async function uploadTextPositions(allTexts)
         let position = await getTextLocation(text)
         positions.push(position)
     }
-    log(JSON.stringify(positions))
-
-
     let screenshot = await client.takeScreenshot();
-
     let screenshotLocation = __dirname + "/test.png"
-
-
     fs.writeFile(screenshotLocation, screenshot, 'base64',async function(error) {
         if(error!=null)
         {
             console.log('Error occured while saving screenshot' + error);
         }else
         {
-
-
             let screenSize = await client.getWindowRect();
             await doUpload("test-tag",screenSize.width,screenSize.height,"android","android","28","com.simple.nosdktest","en",positions,screenshotLocation);
         }
     });
-
 }
 
 async function getTextLocation(textValue)
@@ -77,7 +65,7 @@ async function getTextLocation(textValue)
     const element = await client.$(`android=${selector}`)
     let elementPosition = await element.getLocation()  
     let elementSize = await element.getSize()
-	return {value:textValue,x:elementPosition.x,y:elementPosition.y,width: elementSize.width,height: elementSize.height}
+	return {text:textValue,x:elementPosition.x,y:elementPosition.y,width: elementSize.width,height: elementSize.height}
 }
 
 function getTexts(object)
@@ -97,7 +85,6 @@ function getTexts(object)
                 let text = value[0]["$"]["text"]
                 foundTexts.push(text)
             }
-            
         }
     }
     return foundTexts
@@ -109,39 +96,28 @@ async function getPage()
     return source
 }
 
-function log(msg)
-{
-  console.log(msg)
-}
-
-
-
-async function doUpload(screenTag,screenWidth,screenHeight,deviceModel,platform,os,bundle,lang,stringPositions, imageLocation)
+async function doUpload(screenTag,screenWidth,screenHeight,stringPositions,imageLocation)
 {
    
-    log("RICH doUpload: " + imageLocation)
-
         var data = {
             screenTag : screenTag,
             width: screenWidth,
             height : screenHeight,
-            deviceModel : deviceModel,
-            platform : platform,
-            operatingSystem : os,
-            bundleVersion : bundle,
-            deviceLanguageLong : lang,
+            deviceModel : opts.capabilities.deviceName,
+            platform : opts.capabilities.platformName,
+            operatingSystem : opts.capabilities.platformVersion,
+            bundleVersion : 1,
+            deviceLanguageLong : languageToUse,
             isBlank : false,
             useOCR : false,
             stringPositions : stringPositions
         }
-      
         const form = {
             data: JSON.stringify(data),
             file: fs.createReadStream(imageLocation)
         }
        
         var headers = {Authorization: apiToken}
-                    
 
         request.post({url: apiUrl, formData: form, headers: headers}, function optionalCallback(err, httpResponse, body) {
             if (err) {
@@ -150,14 +126,6 @@ async function doUpload(screenTag,screenWidth,screenHeight,deviceModel,platform,
             console.log('Upload successful!  Server responded with:', body);
         });
 
-
 }
-
-
-
-
-
-
-
 
 main();
