@@ -1,18 +1,14 @@
 {
-  "name": "nosdkexample",
+  "name": "applanganosdkappiumtools",
   "version": "1.0.0",
   "description": "",
-  "main": "androidScreenShots.js",
+  "main": "applangaTools.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "applanganosdkappiumtools": "file:applangaTools",
-    "axios": "^0.20.0",
-    "fast-xml-parser": "^3.17.4",
-    "form-data": "^3.0.0",
     "fs": "0.0.1-security",
     "request": "^2.88.2",
     "xml2js": "^0.4.23"

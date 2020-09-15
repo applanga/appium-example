@@ -1,4 +1,5 @@
 <resources>
-    <string name="app_name">NoSdkTest</string>
+    <string name="app_name">No Sdk Test</string>
     <string name="hello">Hello World!</string>
+    <string name="hello2">rich is cool</string>
 </resources>

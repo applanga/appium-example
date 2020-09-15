@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">german</string>
-    <string name="hello">german</string>
+    <string name="app_name">Kein Sdk Test</string>
+    <string name="hello">Hallo Welt!</string>
+    <string name="hello2">rich ist geil</string>
 </resources>
