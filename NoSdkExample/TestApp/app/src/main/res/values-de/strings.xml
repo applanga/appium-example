@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Kein Sdk Test</string>
-    <string name="hello">Hallo Welt!</string>
-    <string name="hello2">rich ist geil</string>
+    <string name="hello">Seite 1</string>
+    <string name="hello2">Seite 2</string>
+    <string name="button">Seite öffnen 2</string>
 </resources>

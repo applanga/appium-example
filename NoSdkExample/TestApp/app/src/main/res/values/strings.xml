@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">No Sdk Test</string>
-    <string name="hello">Hello World!</string>
-    <string name="hello2">rich is cool</string>
+    <string name="hello">Page 1</string>
+    <string name="hello2">Page 2</string>
+    <string name="button">Open Page 2</string>
 </resources>

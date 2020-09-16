@@ -26,6 +26,7 @@ async function doScreenshot()
 {
     let xml = await client.getPageSource()
     parseString(xml,async function (err, result) {
+        console.log(JSON.stringify(result))
         let allTexts = getAllTextOnScreen(result)
         await uploadTextPositions(allTexts)
     });
@@ -52,6 +53,17 @@ function getAllTextOnScreen(object)
                     }
                 }
             }
+            if(key.includes("XCUIElementTypeStaticText"))
+            {
+                for (let i = 0; i < value.length; i++) {
+                    const text = value[i]["$"]["value"]
+                    if(text != null)
+                    {
+                        foundTexts.push(text)
+                    }
+                }
+            }
+
         }
     }
     return foundTexts
@@ -99,16 +111,15 @@ async function getAndroidStringPosition(textValue)
 
 async function getIosStringPosition(textValue)
 {
-    // const selector = 'new UiSelector().text("' + textValue + '")'
-    // const element = await client.$(`android=${selector}`)
-    // let elementPosition = await element.getLocation()  
-    // let elementSize = await element.getSize()
-	// return {text:textValue,x:elementPosition.x,y:elementPosition.y,width: elementSize.width,height: elementSize.height}
+    const element = await client.$('~' + textValue)
+    let elementPosition = await element.getLocation()  
+    let elementSize = await element.getSize()
+	return {text:textValue,x:elementPosition.x,y:elementPosition.y,width: elementSize.width,height: elementSize.height}
 }
 
 async function doUpload(screenWidth,screenHeight,stringPositions,imageLocation)
 {
-        let opts = client.capabilities.desired
+        let opts = platform == "Android" ? client.capabilities.desired : client.capabilities
         var data = {
             screenTag : tag,
             width: screenWidth,
