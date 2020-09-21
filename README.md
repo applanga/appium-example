@@ -79,6 +79,8 @@ The same goes for android, but you must specify both the local and language, lik
 
 locale: "DE",language: "de"
 
+In the example scripts i have an array of languages to test and run through them one after the other with a loop, this way you can run tests for all languages in one go!
+
 
 
 ## React Native and Flutter support
