@@ -44,18 +44,18 @@ const appId = "5f5f213bbc978a30dbfb7073"
 async function main () {
    
     //iOS Screenshots
-    // for (let i = 0; i < languagesToUse.length; i++) {
-    //     const language = languagesToUse[i]
-    //     const locale = localesToUse[i]
-    //     client = await wdio.remote(getOptions("iOS",locale,language))
-    //     await applanga.captureScreenshot(client,"page-1","iOS",language,appId,apiToken)
-    //     await client.pause(2000)
-    //     openPage2("iOS")
-    //     await applanga.captureScreenshot(client,"page-2","iOS",language,appId,apiToken)
-    // }
+    for (let i = 0; i < languagesToUse.length; i++) {
+        const language = languagesToUse[i]
+        const locale = localesToUse[i]
+        client = await wdio.remote(getOptions("iOS",locale,language))
+        await applanga.captureScreenshot(client,"page-1","iOS",language,appId,apiToken)
+        await client.pause(2000)
+        openPage2("iOS")
+        await applanga.captureScreenshot(client,"page-2","iOS",language,appId,apiToken)
+    }
     
     //Android Screenshots
-    for (let i = 0; i < languagesToUse.length; i++) {
+   for (let i = 0; i < languagesToUse.length; i++) {
         const language = languagesToUse[i]
         const locale = localesToUse[i]
         client = await wdio.remote(getOptions("Android",locale,language))
@@ -63,7 +63,7 @@ async function main () {
         await client.pause(2000)
         openPage2("Android")
         await applanga.captureScreenshot(client,"page-2","Android",language,appId,apiToken)
-    }
+   }
 
    
 	
