@@ -3,30 +3,30 @@ const applanga = require("applangaappiumutils");
 
 
 var client
+var languagesToUse = ["de","en"]
 
 async function main () {
 	
-	await connectClient(false)
+	for (let i = 0; i < languagesToUse.length; i++) {
+		const language = languagesToUse[i]
+		await connectClient(false,language)
 
-	await applanga.enableDraftModeIos(client,"714b")
+		await applanga.enableDraftModeIos(client,"714b")
 
-	await reopenApp()
-	
-	await applanga.takeScreenshotWithTagIos(client,"page-1");
-
-	await loadSecondView()
-
-	await applanga.takeScreenshotWithTagIos(client,"page-2");
-
+		await connectClient(true,language)
+		await applanga.takeScreenshotWithTagIos(client,"page-1");
+		await loadSecondView()
+		await applanga.takeScreenshotWithTagIos(client,"page-2");
+	}
 }
 
-async function connectClient(noReset)
+async function connectClient(noReset,language)
 {
 	let opts = {
 		path: '/wd/hub',
 		port: 4723,
 		capabilities: {
-			language: "en",
+			language: language,
 			platformName: "iOS",
 			platformVersion: "13.6",
 			deviceName: "iPhone 8",
@@ -38,10 +38,7 @@ async function connectClient(noReset)
 	client = await wdio.remote(opts);
 }
 
-async function reopenApp()
-{
-	await connectClient(true)
-}
+
 
 async function loadSecondView()
 {
