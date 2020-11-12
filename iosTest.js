@@ -1,6 +1,7 @@
 const wdio = require("webdriverio");
 const applanga = require("applangaappiumutils");
 
+const draftModeKey = "86f8"
 
 var client
 
@@ -11,7 +12,7 @@ async function main () {
 	for (let i = 0; i < languagesToUse.length; i++) {
         const language = languagesToUse[i]
 		await connectClient(false,language)
-		await applanga.enableDraftModeIos(client,"86f8")
+		await applanga.enableDraftModeIos(client,draftModeKey)
 		await connectClient(true,language)
 		await applanga.takeScreenshotWithTagIos(client,"page-1")
 		await loadSecondView()

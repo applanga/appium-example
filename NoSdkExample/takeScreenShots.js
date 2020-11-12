@@ -5,6 +5,9 @@ const applanga = require("applanganosdkappiumtools");
 var languagesToUse = ["de","en"]
 var localesToUse = ["DE","us"]
 
+const apiToken = "Bearer 5f5f213bbc978a30dbfb7073!fc1794d1e6a2b5a411c98ff016ba56c6"
+const appId = "5f5f213bbc978a30dbfb7073"
+
 function getOptions(platform,locale,language)
 {
     var androidOptions = {
@@ -16,7 +19,7 @@ function getOptions(platform,locale,language)
           platformName: "Android",
           platformVersion: "9",
           deviceName: "Pixel_3_API_28",
-          app: __dirname + "/TestApp/app/build/outputs/apk/debug/app-debug.apk",
+          app: __dirname + "/androidTestApp/app/build/outputs/apk/debug/app-debug.apk",
           appPackage: "com.simple.nosdktest",
           appActivity: "com.simple.nosdktest.MainActivity",
           automationName: "UiAutomator2"
@@ -38,12 +41,23 @@ function getOptions(platform,locale,language)
       return platform == "Android" ? androidOptions : iosOptions;
 }
 
-const apiToken = "Bearer 5f5f213bbc978a30dbfb7073!fc1794d1e6a2b5a411c98ff016ba56c6"
-const appId = "5f5f213bbc978a30dbfb7073"
+
 
 async function main () {
    
-    //iOS Screenshots
+   
+    await takeIosScreenshots()
+
+    await takeAndroidScreenshots()   
+	
+    await client.pause(4000)
+
+
+}
+
+async function takeIosScreenshots()
+{
+	 //iOS Screenshots
     for (let i = 0; i < languagesToUse.length; i++) {
         const language = languagesToUse[i]
         const locale = localesToUse[i]
@@ -53,8 +67,11 @@ async function main () {
         openPage2("iOS")
         await applanga.captureScreenshot(client,"page-2","iOS",language,appId,apiToken)
     }
-    
-    //Android Screenshots
+}
+
+async function takeAndroidScreenshots()
+{
+	 //Android Screenshots
    for (let i = 0; i < languagesToUse.length; i++) {
         const language = languagesToUse[i]
         const locale = localesToUse[i]
@@ -64,12 +81,6 @@ async function main () {
         openPage2("Android")
         await applanga.captureScreenshot(client,"page-2","Android",language,appId,apiToken)
    }
-
-   
-	
-    await client.pause(4000)
-
-
 }
 
 async function openPage2(platform)

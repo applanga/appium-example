@@ -6,6 +6,7 @@ var client
 var languagesToUse = ["de","en"]
 var localesToUse = ["DE","us"]
 
+const draftModeKey = "86f8"
 
 
 function getOptions(locale,language)
@@ -33,7 +34,7 @@ async function main () {
         const locale = localesToUse[i]
 		client = await wdio.remote(getOptions(locale,language))
 		await client.pause(1000)
-		await applanga.enableDraftModeAndroid(client,"86f8","com.example.appiumtestapp")
+		await applanga.enableDraftModeAndroid(client,draftModeKey,"com.example.appiumtestapp")
 		await applanga.takeScreenshotWithTagAndroid(client,"page-1");
 		await openSecondView()
 		await applanga.takeScreenshotWithTagAndroid(client,"page-2");
