@@ -28,6 +28,7 @@ async function enableDraftModeIos(client, draftKey)
 	await client.pause(500)
 
 	let keyInput = await client.$("~DraftModeKeyInput")
+	
     keyInput.addValue(draftKey);
 
 	await client.pause(500);
@@ -41,25 +42,26 @@ async function enableDraftModeIos(client, draftKey)
 
 async function takeScreenshotWithTagIos(client,tag)
 {
-	await toggleScreenshotMenuIos(client)
+	await toggleScreenshotMenuIos(true,client)
 	
-	let selectTagButton = await client.$("~Applanga.SelectTag")
-	let selectTagButtonLocation = await selectTagButton.getLocation()
+
+	
+
+	let tagInput = await client.$("~Applanga.CustomScreenTagInput")
+
+	let tagInputLocation = await tagInput.getLocation()
 	
 	await client.touchAction({
-	  action: 'tap',
-	  x: selectTagButtonLocation.x + 5,
-	  y: selectTagButtonLocation.y + 5
-	})
-	
+		action: 'tap',
+		x: tagInputLocation.x + 5,
+		y: tagInputLocation.y + 5
+	  })
+
+	await tagInput.addValue(tag);
+		
 	await client.pause(1000);
 	
-	let tagListing = await client.$("~cell_" + tag)
-	tagListing.click()
-	
-	await client.pause(1000);
-	
-	let takeScreenshotButton = await client.$("~Applanga.CaptureScreen")
+	let takeScreenshotButton = await client.$("~Applanga.ConfirmScreenshot")
 	let takeScreenshotButtonLocation = await takeScreenshotButton.getLocation()
 	
 	await client.touchAction({
@@ -70,13 +72,27 @@ async function takeScreenshotWithTagIos(client,tag)
 	
 	await client.pause(3000);
 	
-	await toggleScreenshotMenuIos(client)
+	
+	await toggleScreenshotMenuIos(false,client)
 	
 	await client.pause(1000);
 }
 
-async function toggleScreenshotMenuIos(client)
+async function toggleScreenshotMenuIos(open, client)
 {
+	if(!open)
+	{
+		let closeMenuButton = await client.$("~Applanga.CancelScreenshot")
+		let closeMenuButtonLocation = await closeMenuButton.getLocation()
+		
+		await client.touchAction({
+			action: 'tap',
+			x: closeMenuButtonLocation.x + 5,
+			y: closeMenuButtonLocation.y + 5
+		  })
+	
+	}
+
  	await client.performActions([{
     "type": "pointer",
     "id": "finger1",
@@ -101,6 +117,19 @@ async function toggleScreenshotMenuIos(client)
     ]
 	}]);
 	await client.pause(1000);
+	if(open)
+	{
+		let openMenuButton = await client.$("~Applanga.OpenScreenshotView")
+		let openMenuButtonLocation = await openMenuButton.getLocation()
+		
+		await client.touchAction({
+			action: 'tap',
+			x: openMenuButtonLocation.x + 5,
+			y: openMenuButtonLocation.y + 5
+		})
+
+		await client.pause(500);
+	}
 }
 
 async function enableDraftModeAndroid(client,draftKey,package) 
@@ -139,18 +168,13 @@ async function takeScreenshotWithTagAndroid(client, tag)
 
 	await client.pause(500)
 
-	let tagSelect = await getElement(client,"applanga_spinner_screentag_select")
+	let tagInput = await getElement(client,"applanga_screen_name_edit_text")
 
-	tagSelect.click()
-
-	await client.pause(500)
-
-	const tagItem = await client.$('android=new UiSelector().text(\"' + tag +'\")')
-	tagItem.click()
+	tagInput.addValue(tag);
 
 	await client.pause(500)
 
-	let captureScreenbutton = await getElement(client,"applanga_button_capture_screen")
+	let captureScreenbutton = await getElement(client,"applanga_button_confirm_capture")
 
 	await captureScreenbutton.click()
 
@@ -169,10 +193,20 @@ async function showScreenshotMenuAndroid(client)
 	]);
 	await client.pause(1000);
 
+	let showScreenshotMenuButton = await getElement(client,"applanga_button_open_capture_screen_menu")
+
+	await showScreenshotMenuButton.click()
+	await client.pause(500);
+
 }
 
 async function hideScreenshotMenuAndroid(client)
 {
+
+	let closeScreenshotMenuButton = await getElement(client,"applanga_button_cancel_capture")
+
+	await closeScreenshotMenuButton.click()
+
 	await client.pause(1000);
 	client.touchPerform([
 	  { action: 'press', options: { x: 0, y: 500 }},
