@@ -1,12 +1,12 @@
 const wdio = require("webdriverio");
 var client
-const applanga = require("applanganosdkappiumtools");
+const applanga = require("applanga-appium");
 
 var languagesToUse = ["de","en"]
 var localesToUse = ["DE","us"]
 
-const apiToken = "Bearer 5f5f213bbc978a30dbfb7073!fc1794d1e6a2b5a411c98ff016ba56c6"
-const appId = "5f5f213bbc978a30dbfb7073"
+const apiToken = applanga.getAPIToken
+const appId = applanga.validateAndfindAppId
 
 function getOptions(platform,locale,language)
 {
@@ -17,8 +17,8 @@ function getOptions(platform,locale,language)
           locale: locale,
           language: language,
           platformName: "Android",
-          platformVersion: "9",
-          deviceName: "Pixel_3_API_28",
+          platformVersion: "11",
+          deviceName: "Pixel_5_pro_API_30",
           app: __dirname + "/androidTestApp/app/build/outputs/apk/debug/app-debug.apk",
           appPackage: "com.simple.nosdktest",
           appActivity: "com.simple.nosdktest.MainActivity",
@@ -32,9 +32,10 @@ function getOptions(platform,locale,language)
 		capabilities: {
 			language: language,
 			platformName: "iOS",
-			platformVersion: "13.6",
-			deviceName: "iPhone 8",
-			app: __dirname + "/iosTestApp/ApplangaNoSdk/DerivedData/ApplangaNoSdk/Build/Products/Debug-iphonesimulator/ApplangaNoSdk.app",
+			platformVersion: "15.5",
+			deviceName: "iPhone 13",
+            udid:"45B66355-2207-409F-AE05-39F0FFE9B6CF",
+			app: __dirname + "/iosTestApp/ApplangaNoSdk/ApplangaNoSdk/test/ApplangaNoSdk.app",
 			automationName: "XCUITest"
 		}
 	};
@@ -79,6 +80,7 @@ async function takeAndroidScreenshots()
         await applanga.captureScreenshot(client,"page-1","Android",language,appId,apiToken)
         await client.pause(2000)
         openPage2("Android")
+        await client.pause(2000)
         await applanga.captureScreenshot(client,"page-2","Android",language,appId,apiToken)
    }
 }

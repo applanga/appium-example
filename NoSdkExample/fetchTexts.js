@@ -1,14 +1,14 @@
 const wdio = require("webdriverio");
 var client
-const applanga = require("applanganosdkappiumtools");
+const applanga = require("applanga-appium");
 const { default: driver } = require("appium-uiautomator2-driver/build/lib/driver");
 
 var languagesToUse = ["de","en"]
 var localesToUse = ["DE","us"]
 var platformsToUse = ["Android","iOS"]
 
-const apiToken = "Bearer 6228ffbc7211482e9c2623db!6254b7e0e2a1fc6285a7e92d7839c7b8"
-const appId = "6228ffbc7211482e9c2623db"
+const apiToken = applanga.getAPIToken
+const appId = applanga.validateAndfindAppId
 
 
 
@@ -21,9 +21,9 @@ function getOptions(platform,locale,language)
           locale: locale,
           language: language,
           platformName: "Android",
-          platformVersion: "9",
-          deviceName: "Pixel_4_API_28",
-          app: __dirname + "/androidTestApp/app/build/intermediates/apk/debug/app-debug.apk",
+          platformVersion: "11",
+          deviceName: "Pixel_5_pro_API_30",
+          app: __dirname + "/androidTestApp/app/build/outputs/apk/debug/app-debug.apk",
           appPackage: "com.simple.nosdktest",
           appActivity: "com.simple.nosdktest.MainActivity",
           automationName: "UiAutomator2"
@@ -36,9 +36,10 @@ function getOptions(platform,locale,language)
 		capabilities: {
 			language: language,
 			platformName: "iOS",
-			platformVersion: "15.2",
-			deviceName: "iPhone 12",
-			app: __dirname + "/iosTestApp/ApplangaNoSdk/ApplangaNoSdk/test/ApplangaNoSdk.ipa",
+			platformVersion: "15.5",
+            udid:"<SIMULATOR UDID>",
+			deviceName: "iPhone 13",
+			app: __dirname + "/iosTestApp/ApplangaNoSdk/ApplangaNoSdk/test/ApplangaNoSdk.app",
 			automationName: "XCUITest"
 		}
 	};
@@ -74,7 +75,7 @@ async function checkForText(platform)
        const language = languagesToUse[1]
        const locale = localesToUse[1]
        client = await wdio.remote(getOptions("iOS",locale,language))
-       let element = await client.$("~label")
+       let element = await client.$("~Page 1")
        let text = await element.getText();    
        console.log('iOS' + ' ' + text);
        await client.pause(2000)
