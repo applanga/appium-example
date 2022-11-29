@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?><!--<layout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:tools="http://schemas.android.com/tools">-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragments.AboutFragment"
+    android:exported="false">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:contentDescription="@string/menu_about"
+                android:src="@drawable/ic_logo"
+                tools:srcCompat="@drawable/sun_cloud_round" />
+
+            <TextView
+                android:id="@+id/about_app_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Weather-App"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="24sp"
+                tools:text="Weather-App" />
+
+            <TextView
+                android:id="@+id/about_app_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Weather-App is a simple tool to help you find out what's the weather like in your desired location"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="20sp"
+                tools:text="Weather-App is a simple tool to help you find out what's the weather like in your desired location" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:src="@drawable/city" />
+
+            <TextView
+                android:id="@+id/about_features_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Features"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="24sp"
+                tools:text="Features" />
+
+            <TextView
+                android:id="@+id/about_features_text_first"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Get a detailed report of the weather in your current location or get a daily temperature report by time and date"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="20sp"
+                tools:text="Get a detailed report of the weather in your current location or get a daily temperature report by time and date" />
+
+            <TextView
+                android:id="@+id/about_features_text_second"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Displayed information is based on the location (city based) you provide"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="20sp"
+                tools:text="Displayed information is based on the location (city based) you provide" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:src="@drawable/calendar"
+                tools:ignore="ImageContrastCheck" />
+
+            <TextView
+                android:id="@+id/about_display_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Display"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="24sp"
+                tools:text="Display" />
+
+            <TextView
+                android:id="@+id/about_display_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="A simple UI designed to give you the most important information in the easiest way"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="20sp"
+                tools:text="A simple UI designed to give you the most important information in the easiest way" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:src="@drawable/settings" />
+
+            <TextView
+                android:id="@+id/about_customize_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Customize"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/about_customize_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Use the settings window to change the displayed location, preferred measurement unit, app language and number of displayed days"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout><!--</layout>-->

@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 1.5rem;
+}
+
+.text {
+    text-align: center;
+    line-height: 1.6;
+    font-size: 1.4rem;
+}
+
+.section-dark {
+    background: #f7f8fa;
+    padding: 1.5rem 3rem 3.5rem;
+}
+
+.section-light {
+    background: white;
+    padding: 1.5rem 3rem 3.5rem;
+}
+
+.colored-line {
+    background: #008ed6;
+    height: 2px;
+    width: 8rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dark-text {
+    color: #454545;
+    text-align: center;
+    font-size: 2.4rem;
+}
+
+.credit {
+    margin: 0.35rem;
+}

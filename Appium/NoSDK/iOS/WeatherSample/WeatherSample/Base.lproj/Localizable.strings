@@ -1,0 +1,65 @@
+"app_name" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌​﻿﻿‍Weather-App";
+/* home */
+"home_title" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌​﻿﻿﻿Home";
+"home_description" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌​​​Description";
+"home_feels_like" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌​​‌Feels like";
+"home_humidity" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌​​‍Humidity";
+"home_clouds" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌​​﻿Clouds";
+"home_wind_speed" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌​‌​Wind speed";
+"home_pressure" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌​‌‌Pressure";
+"clear_sky" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌​‌‍clear sky";
+"few_clouds" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌​‌﻿few clouds";
+"scattered_clouds" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌​‍​scattered clouds";
+"broken_clouds" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌​‍‌broken clouds";
+"shower_rain" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌​‍‍shower rain";
+"rain" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌​‍﻿rain";
+"thunderstorm" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌​﻿​thunderstorm";
+"snow" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌​﻿‌snow";
+"mist" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌​﻿‍mist";
+/* daily */
+"daily_title" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌​﻿﻿Daily Forecast";
+"daily_displayed_days" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌‌​​";
+/* about */
+"about_title" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌‌​‌About";
+"about_app_header" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌‌​‍Weather-App";
+"about_app_text" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌‌​﻿Weather-App is a simple tool to help you find out what's the weather like in your desired location";
+"about_features_header" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌‌‌​Features";
+"about_features_text_first" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌‌‌‌Get a detailed report of the weather in your current location or get a daily temperature report by time and date";
+"about_features_text_second" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌‌‌‍Displayed information is based on the location (city based) you provide";
+"about_display_header" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌‌‌﻿Display";
+"about_display_text" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌‌‍​A simple UI designed to give you the most important information in the easiest way";
+"about_customize_header" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌‌‍‌Customize";
+"about_customize_text" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌‌‍‍Use the settings window to change the displayed location, preferred measurement unit, app language and number of displayed days";
+/* settings */
+"settings_title" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌‌‍﻿Settings";
+"settings_location" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌‌﻿​Location";
+"settings_measurement_unit" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌‌﻿‌Measurement unit";
+"settings_metric_option" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌‌﻿‍Metric";
+"settings_imperial_option" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌‌﻿﻿Imperial";
+"settings_language" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌‍​​App language";
+"settings_displayed_days" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌‍​‌Number of displayed days";
+"settings_save_button" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌‍​‍Save Settings";
+"settings_error_warning" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌‍​﻿Something went wrong. Please make sure to enter a valid city name.";
+"settings_app_language[0]" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌‍‌​English";
+"settings_app_language[1]" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌‍‌‌German";
+"settings_app_language[2]" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌‍‌‍Spanish";
+/* dates */
+"January" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌‍‌﻿January";
+"February" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌‍‍​February";
+"March" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌‍‍‌March";
+"April" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌‍‍‍April";
+"May" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌‍‍﻿May";
+"June" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌‍﻿​June";
+"July" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌‍﻿‌July";
+"August" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌‍﻿‍August";
+"September" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌‍﻿﻿September";
+"October" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌﻿​​October";
+"November" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌﻿​‌November";
+"December" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌﻿​‍December";
+"Sunday" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌﻿​﻿Sunday";
+"Monday" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌﻿‌​Monday";
+"Tuesday" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌﻿‌‌Tuesday";
+"Wednesday" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌﻿‌‍Wednesday";
+"Thursday" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌﻿‌﻿Thursday";
+"Friday" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌﻿‍​Friday";
+"Saturday" = "‌‍​‍﻿‌‍‌‍​﻿﻿‌‌​﻿‌‍​‍‍﻿​‌‌‍‍​​​﻿‌‍‍‌﻿‌‍​‍​‌﻿‌‌﻿‍‌Saturday";

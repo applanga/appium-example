@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Applanga>
+    <ReferenceStrings lang="baseLanguage"/>
+    <AllowStrings>app_name,nav_header_subtitle,menu_home,menu_daily,menu_about,menu_settings,menu_documentation,fragment_settings_title,home_description_title,home_clouds_title,home_humidity_title,home_pressure_title,home_wind_speed_title,home_feels_like_title,daily_pm,daily_am,daily_day_number,about_app_header,about_app_text,about_features_header,about_features_text_first,about_features_text_second,about_display_header,about_display_text,about_customize_header,about_customize_text,settings_error_toast,settings_location_title,settings_city_placeholder,settings_measurement_title,settings_metric_radio,settings_imperial_radio,settings_language_title,settings_days_title,settings_save_changes_btn,settings_saved_toast,description_clear_sky,description_few_clouds,description_scattered_clouds,description_broken_clouds,description_shower_rain,description_rain,description_thunderstorm,description_snow,description_mist,days_sunday,days_monday,days_tuesday,days_wednesday,days_thursday,days_friday,days_saturday,not_available,month_january,month_february,month_march,month_april,month_may,month_june,month_july,month_august,month_september,month_october,month_november,month_december,error_city_name,settings_language_options,</AllowStrings>
+    <PluginVersion>app:3.0.153,</PluginVersion>
+    <PackageName>com.applanga.weathersample</PackageName>
+    <Menu id="nav_home" layoutName="bottom_nav_menu" title="menu_home"/>
+    <Menu id="nav_daily" layoutName="bottom_nav_menu" title="menu_daily"/>
+    <Menu id="nav_about" layoutName="bottom_nav_menu" title="menu_about"/>
+    <Menu id="nav_settings" layoutName="bottom_nav_menu" title="menu_settings"/>
+    <Menu id="nav_home" layoutName="bottom_nav" title="menu_home"/>
+    <Menu id="nav_daily" layoutName="bottom_nav" title="menu_daily"/>
+    <Menu id="nav_about" layoutName="bottom_nav" title="menu_about"/>
+    <Menu id="nav_settings" layoutName="bottom_nav" title="menu_settings"/>
+</Applanga>

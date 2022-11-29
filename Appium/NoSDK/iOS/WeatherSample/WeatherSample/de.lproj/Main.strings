@@ -1,0 +1,111 @@
+
+/* Class = "UILabel"; text = "Feels like"; ObjectID = "1K6-wm-8QZ"; */
+"1K6-wm-8QZ.text" = "Feels like";
+
+/* Class = "UILabel"; text = "Measurement unit"; ObjectID = "5c1-aB-wrV"; */
+"5c1-aB-wrV.text" = "Measurement unit";
+
+/* Class = "UITextField"; text = "New York"; ObjectID = "5n9-43-e45"; */
+"5n9-43-e45.text" = "New York";
+
+/* Class = "UITabBarItem"; title = "Daily Forecast"; ObjectID = "9Z9-nc-5aa"; */
+"9Z9-nc-5aa.title" = "Daily Forecast";
+
+/* Class = "UILabel"; text = "Humidity"; ObjectID = "BYM-aL-Lz6"; */
+"BYM-aL-Lz6.text" = "Humidity";
+
+/* Class = "UITabBarItem"; title = "Settings"; ObjectID = "Edk-lI-Jxk"; */
+"Edk-lI-Jxk.title" = "Settings";
+
+/* Class = "UILabel"; text = "Day"; ObjectID = "G2C-ie-3eA"; */
+"G2C-ie-3eA.text" = "Day";
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "Ieh-sB-BAN"; */
+"Ieh-sB-BAN.title" = "Home";
+
+/* Class = "UINavigationItem"; title = "Settings"; ObjectID = "Joj-Qc-FD3"; */
+"Joj-Qc-FD3.title" = "Settings";
+
+/* Class = "UILabel"; text = "App language"; ObjectID = "KR9-EQ-6D0"; */
+"KR9-EQ-6D0.text" = "App language";
+
+/* Class = "UILabel"; text = "Number of displayed days"; ObjectID = "LTL-QX-ThX"; */
+"LTL-QX-ThX.text" = "Number of displayed days";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "N9p-NA-zW9"; */
+"N9p-NA-zW9.text" = "Label";
+
+/* Class = "UILabel"; text = "Metric"; ObjectID = "UFI-XZ-OaF"; */
+"UFI-XZ-OaF.text" = "Metric";
+
+/* Class = "UILabel"; text = "Tem"; ObjectID = "WaT-oy-17b"; */
+"WaT-oy-17b.text" = "Tem";
+
+/* Class = "UILabel"; text = "Month"; ObjectID = "Ztn-FV-g8m"; */
+"Ztn-FV-g8m.text" = "Month";
+
+/* Class = "UINavigationItem"; title = "About"; ObjectID = "bPO-dA-X5h"; */
+"bPO-dA-X5h.title" = "About";
+
+/* Class = "UIButton"; normalTitle = "B"; ObjectID = "cen-FJ-6ho"; */
+"cen-FJ-6ho.normalTitle" = "B";
+
+/* Class = "UILabel"; text = "Time"; ObjectID = "ecP-3Q-gI2"; */
+"ecP-3Q-gI2.text" = "Time";
+
+/* Class = "UILabel"; text = "Tem"; ObjectID = "fps-b8-MaH"; */
+"fps-b8-MaH.text" = "Tem";
+
+/* Class = "UIButton"; normalTitle = "English"; ObjectID = "fuR-Er-tgN"; */
+"fuR-Er-tgN.normalTitle" = "English";
+
+/* Class = "UILabel"; text = "Imperial"; ObjectID = "g74-qk-SPO"; */
+"g74-qk-SPO.text" = "Imperial";
+
+/* Class = "UITabBarItem"; title = "About"; ObjectID = "iix-Rq-vHI"; */
+"iix-Rq-vHI.title" = "About";
+
+/* Class = "UIButton"; normalTitle = "French"; ObjectID = "jMd-ZY-OIc"; */
+"jMd-ZY-OIc.normalTitle" = "French";
+
+/* Class = "UIButton"; normalTitle = "Save Settings"; ObjectID = "jtG-cg-DWk"; */
+"jtG-cg-DWk.normalTitle" = "Save Settings";
+
+/* Class = "UIButton"; normalTitle = "B"; ObjectID = "lSY-Vv-joq"; */
+"lSY-Vv-joq.normalTitle" = "B";
+
+/* Class = "UILabel"; text = "E"; ObjectID = "ldN-ra-ReF"; */
+"ldN-ra-ReF.text" = "E";
+
+/* Class = "UILabel"; text = "Description"; ObjectID = "m0T-Mr-SwV"; */
+"m0T-Mr-SwV.text" = "Description";
+
+/* Class = "UIButton"; normalTitle = "German"; ObjectID = "mMN-aU-4ns"; */
+"mMN-aU-4ns.normalTitle" = "German";
+
+/* Class = "UILabel"; text = "Location"; ObjectID = "mlX-Ts-9Ix"; */
+"mlX-Ts-9Ix.text" = "Location";
+
+/* Class = "UILabel"; text = "Wind speed"; ObjectID = "oU1-18-Yuj"; */
+"oU1-18-Yuj.text" = "Wind speed";
+
+/* Class = "UILabel"; text = "Pressure"; ObjectID = "qFr-Mu-C06"; */
+"qFr-Mu-C06.text" = "Pressure";
+
+/* Class = "UINavigationItem"; title = "Home"; ObjectID = "rrP-iU-1CG"; */
+"rrP-iU-1CG.title" = "Home";
+
+/* Class = "UILabel"; text = "Location"; ObjectID = "uEI-5F-vGD"; */
+"uEI-5F-vGD.text" = "Location";
+
+/* Class = "UILabel"; text = "Displaying X of next days"; ObjectID = "uIM-3W-BoM"; */
+"uIM-3W-BoM.text" = "Displaying X of next days";
+
+/* Class = "UILabel"; text = "Clouds"; ObjectID = "vFE-Cd-sNU"; */
+"vFE-Cd-sNU.text" = "Clouds";
+
+/* Class = "UILabel"; text = "Date"; ObjectID = "wyI-rm-uDS"; */
+"wyI-rm-uDS.text" = "Date";
+
+/* Class = "UINavigationItem"; title = "Daily Forecast"; ObjectID = "yXO-4k-hEg"; */
+"yXO-4k-hEg.title" = "Daily Forecast";

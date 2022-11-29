@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_name">Wetter App</string>
+  <string name="nav_header_subtitle">Holen Sie sich jetzt Ihr lokales Wetter</string>
+  <string name="menu_home">Heim</string>
+  <string name="menu_daily">Tägliche Vorhersage</string>
+  <string name="menu_about">Über</string>
+  <string name="menu_settings">Einstellungen</string>
+  <string name="menu_documentation">Dokumentation</string>
+  <string name="fragment_settings_title">App-Einstellungen</string>
+  <string name="home_description_title">Beschreibung</string>
+  <string name="home_clouds_title">Wolken</string>
+  <string name="home_humidity_title">Feuchtigkeit</string>
+  <string name="home_pressure_title">Druck</string>
+  <string name="home_wind_speed_title">Windgeschwindigkeit</string>
+  <string name="home_feels_like_title">Fühlt sich an wie</string>
+  <string name="daily_pm">NACHMITTAGS</string>
+  <string name="daily_am">BIN</string>
+  <string name="about_app_header">         Wetter-App     </string>
+  <string name="about_app_text">         Weather-App ist ein einfaches Tool, mit dem Sie herausfinden können, wie das Wetter an Ihrem gewünschten Ort ist     </string>
+  <string name="about_features_header">         Funktionen     </string>
+  <string name="about_features_text_first">         Erhalten Sie einen detaillierten Bericht über das Wetter an Ihrem aktuellen Standort oder erhalten Sie einen täglichen Temperaturbericht nach Uhrzeit und Datum     </string>
+  <string name="about_features_text_second">         Die angezeigten Informationen basieren auf dem von Ihnen angegebenen Standort (stadtbasiert)     </string>
+  <string name="about_display_header">         Zeigen     </string>
+  <string name="about_display_text">         Eine einfache Benutzeroberfläche, die entwickelt wurde, um Ihnen die wichtigsten Informationen auf einfachste Weise zur Verfügung zu stellen     </string>
+  <string name="about_customize_header">         Anpassen     </string>
+  <string name="about_customize_text">         Verwenden Sie das Einstellungsfenster, um den angezeigten Ort, die bevorzugte Maßeinheit, die App-Sprache und die Anzahl der angezeigten Tage zu ändern.     </string>
+  <string name="settings_error_toast">Bitte geben Sie einen gültigen Stadtnamen ein</string>
+  <string name="settings_location_title">Ort</string>
+  <string name="settings_city_placeholder">Geben Sie einen Städtenamen ein</string>
+  <string name="settings_measurement_title">Maßeinheiten</string>
+  <string name="settings_metric_radio">Metrik</string>
+  <string name="settings_imperial_radio">Kaiserlich</string>
+  <string name="settings_language_title">App-Sprache</string>
+  <string name="settings_days_title">Anzahl der angezeigten Tage</string>
+  <string name="settings_save_changes_btn">Änderungen speichern</string>
+  <string name="settings_saved_toast">Gespeicherte Einstellungen</string>
+  <string name="description_clear_sky">Klarer Himmel </string>
+  <string name="description_few_clouds">Wenige Wolken </string>
+  <string name="description_scattered_clouds">Vereinzelte Wolken </string>
+  <string name="description_broken_clouds">Zerbrochene Wolken </string>
+  <string name="description_shower_rain">Regenschauer </string>
+  <string name="description_rain">Regen </string>
+  <string name="description_thunderstorm">Gewitter </string>
+  <string name="description_snow">Schnee </string>
+  <string name="description_mist">Nebel </string>
+  <string name="days_sunday">Sonntag</string>
+  <string name="days_monday">Montag</string>
+  <string name="days_tuesday">Dienstag</string>
+  <string name="days_wednesday">Mittwoch</string>
+  <string name="days_thursday">Donnerstag</string>
+  <string name="days_friday">Freitag</string>
+  <string name="days_saturday">Samstag</string>
+  <string name="not_available">N/A</string>
+  <string name="month_january">Januar</string>
+  <string name="month_february">Februar</string>
+  <string name="month_march">März</string>
+  <string name="month_april">April</string>
+  <string name="month_may">Mai</string>
+  <string name="month_june">Juni</string>
+  <string name="month_july">Juli</string>
+  <string name="month_august">August</string>
+  <string name="month_september">September</string>
+  <string name="month_october">Oktober</string>
+  <string name="month_november">November</string>
+  <string name="month_december">Dezember</string>
+  <string name="error_city_name">Bitte geben Sie einen gültigen Stadtnamen ein</string>
+  <plurals name="daily_day_number">
+    <item quantity="one">\"%d day wird angezeigt\"</item>
+    <item quantity="other">Anzeige der nächsten %d Tage</item>
+  </plurals>
+  <string-array name="settings_language_options">
+    <item>Englisch</item>
+    <item>Deutsch</item>
+    <item>Französisch</item>
+  </string-array>
+</resources>

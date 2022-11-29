@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:exported="false">
+
+    <data>
+        <variable
+            name="dailyWeather"
+            type="com.applanga.weathersample.networking.modules.daily.ApiResponseDaily" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/daily_days_display"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="displaying number of days" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/daily_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/daily_days_display"
+            android:background="@color/grey_light"
+            tools:listitem="@layout/item_day"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

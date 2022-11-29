@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:exported="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_lg"
+        tools:context=".fragments.SettingsFragment">
+
+
+        <TextView
+            android:id="@+id/settings_location_title"
+            style="@style/settings_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_marginTop="@dimen/spacing_md"
+            android:text="@string/settings_location_title" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/settings_city"
+            style="@style/settings_item"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/settings_city_placeholder"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/spacing_lg"/>
+
+        <RadioGroup
+            android:id="@+id/settings_radio_group"
+            style="@style/settings_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_md"
+            android:layout_marginBottom="@dimen/spacing_lg">
+
+            <TextView
+                android:id="@+id/settings_radio_group_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_measurement_title"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/settings_metric"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_metric_radio"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="18sp"
+                android:textColor="@color/grey_dark" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/settings_imperial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_imperial_radio"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="18sp"
+                android:textColor="@color/grey_dark" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/settings_language_title"
+            style="@style/settings_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_language_title"
+            android:layout_marginBottom="@dimen/spacing_sm"
+             />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/settings_language_spinner"
+            style="@style/settings_item"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_lg"/>
+
+        <TextView
+            android:id="@+id/settings_days_title"
+            style="@style/settings_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_days_title"
+            android:layout_marginBottom="@dimen/spacing_sm"
+
+            />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/settings_days_spinner"
+            style="@style/settings_item"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_xl"/>
+
+        <Button
+            android:id="@+id/settings_save_btn"
+            style="@style/settings_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/settings_save_changes_btn"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingBottom="@dimen/spacing_sm"
+            android:paddingTop="@dimen/spacing_sm"
+            android:paddingRight="@dimen/spacing_md"
+            android:paddingLeft="@dimen/spacing_md"
+            />
+    </LinearLayout>
+</layout>
