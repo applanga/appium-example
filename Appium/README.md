@@ -1,6 +1,6 @@
 # Applanga Demo - Android Weather App
 
-A sample app that demonstrates Applanga's automatic localization and hiddenId generation, as well as automated screenshot uploads. Using Applanga's command line tools and Appium.
+This project includes two sample apps both for iOS and Android that demonstrate Applanga's automatic localization and hiddenId generation, as well as automated screenshot uploads. Using Applanga's command line tools and Appium.You will find this sample apps in appium-example/NoSdk/Android or appium-example/NoSdk/iOS respectively.
 
 # Intro
 
@@ -52,14 +52,19 @@ It also contains tools in the form of a node package to make interacting with Ap
 
 6: [ApplangaCLI](https://github.com/applanga/applanga-cli)
 
+### Step by Step Guide
+Please follow along the next few steps and you should be able to have the demo up and running with relative ease.
+
 #### Node setup
 
-You should be able to just run 'npm install' within the repo directory to install all dependencies.
+We handle most dependencies with Node.js if you havent used it before or are unfamiliar with it we recommend you visit [NodeJS](https://nodejs.org/en/about/). To find out more about the runtime environment.
+Make sure to have installed the Node.js runtime in your machine before running 'npm install'. If you haven't done so before this article in pluralsight should help you getting it installed [GettingStartedNode.js](https://www.pluralsight.com/guides/getting-started-with-nodejs).
+You should be able to just run `npm install` in appium-example/NoSdk/Android or appium-example/NoSdk/iOS respectively each project has their own package.json file with its respective dependencies.
 
 
 #### Applanga CLI
 
-In order to make this demo work you will need to install Applanga CLI tools for your command line interface. Instructions to install and initialize are going to be on its github [page](https://github.com/applanga/applanga-cli).
+In order to make this demo work you will need to install Applanga CLI tools for your command line interface. Instructions to install and initialize are going to be on its github [page](https://github.com/applanga/applanga-cli). This is applanga's command line interface we use this in the example instead of an usual sdk in order to push our strings to your applanga dashboard and update your translations accordingly.
 
 #### Applanga JSON Configuration 
 
