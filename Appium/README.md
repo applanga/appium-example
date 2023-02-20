@@ -149,5 +149,6 @@ Please follow along the next few steps and you should be able to have the demo u
 10. For android make sure to have a supported simulator running before running the scripts, no need to do this for iOS the script will automatically open simulator app.
 11. Make sure to have an Appium instance running before running the scripts by typing `appium` on a terminal window
 12. You should now have everything ready to be able to run your scripts you can go ahead and run `node takeSourceLanguageScreenShots` or `node takeTargetLanguagesScreenShots` for more information on how to modify this for additional languages or different simulators please refer to the [Running Scripts](#scripts) section of this readme.
+13. You should now see either iOS simulator or Android's simulator going through the different scenes in app taking screenshots or changing language and going through scenes while taking screenshots according to which script you ran.
 
 
