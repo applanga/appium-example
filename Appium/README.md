@@ -1,9 +1,11 @@
 # Applanga Demo - Android Weather App
 
+
+
 # Intro
 The projects in this repo demonstrate how to use the Applanga Command Line Interface [ApplangaCLI](https://github.com/applanga/applanga-cli) in combination with Appium [Appium](http://appium.io/docs/en/about-appium/getting-started/) to automatically generate and upload screenshots to Applanga without the need to integrate any Applanga SDK to provide context to translators so they can produce better translations as well as for review and testing purposes. 
 
-This project includes two sample apps both for iOS and Android that demonstrate Applanga's automatic localization and hiddenId generation, as well as automated screenshot uploads. You will find android app in appium-example/NoSdk/Android or iOS sample app at appium-example/NoSdk/iOS respectively.
+This project includes two sample apps both for iOS and Android that demonstrate Applanga's automatic localization and hiddenId generation, as well as automated screenshot uploads. You will find android app in appium-example/NoSdk/Android or iOS sample app at appium-example/NoSdk/iOS respectively.We have a [Step by Step](#steps) guide section which can help getting your project's running.
 
 
 ### Using appium and applanga together
@@ -51,8 +53,10 @@ You should be able to just run `npm install` in appium-example/NoSdk/Android or 
 
 In order to make this demo work you will need to install Applanga CLI tools for your command line interface. Instructions to install and initialize are going to be on its github [page](https://github.com/applanga/applanga-cli). This is applanga's command line interface we use this in the example instead of an usual sdk in order to push our strings to your applanga dashboard and update your translations accordingly.
 
+
+
+### Applanga JSON Configuration
 <div id="ApplangaJSON"></div>
-#### Applanga JSON Configuration 
 
 After initializing Applanga CLI with `applanga init` you should have an .applanga.json object on your root folder,make sure to initiate in AppiumNoSdkExample/Android or AppiumNoSdkExample/iOS  since the scripts automatically read your api key from this file . According to your selections and type of project you should have a configuration on the file similar to this e.g.
 
@@ -83,7 +87,7 @@ After initializing Applanga CLI with `applanga init` you should have an .applang
 }
 ```
 
- Make sure to also change the "<Applanga_API_Token>" in each respective .json file with the one you get from Applanga dashboard on project settings-> Show Api Token button. 
+Make sure to also change the "<Applanga_API_Token>" in each respective .json file with the one you get from Applanga dashboard on project settings-> Show Api Token button. 
 
 Now lets go ahead and add our invisible id property to our .applanga.json file as shown in the following example:
 
@@ -118,10 +122,11 @@ Now lets push our source strings to our Applanga dashboard you can do this with 
 
 Once you've added your translations in the Applanga dashboard you can go ahead and pull those translations with `applanga pull` more info on this command [here](https://github.com/applanga/applanga-cli#push--pull-translation-files).
 
-* **Once you've pulled your source and target should have invisible id's. Since they are zero width characters youll need a plugin to see them in your preferred editor and on iOS. Android Studio shows zero width characters by default on their xml files.** 
+***Once you've pulled your source and target should have invisible id's. Since they are zero width characters youll need a plugin to see them in your preferred editor and on iOS. Android Studio shows zero width characters by default on their xml files.*** 
 
+
+### Running Scripts
 <div id="scripts"></div>
-#### Running Scripts
 
 Make sure you have appium instance running with the command `appium` in terminal in order for the tests to work. More info more info on these commands [here](https://github.com/applanga/applanga-cli#push--pull-translation-files).
 
@@ -135,6 +140,8 @@ Make sure to be in the path  appium-example/NoSdk/iOS or appium-example/NoSdk/An
 
 
 ### Step by Step Guide
+<div id="steps"></div>
+
 Please follow along the next few steps and you should be able to have the demo up and running with relative ease.
 
 1. Change to the demo directory in your computer `cd/appium-example/Appium/NoSdk/Android` or `cd/appium-example/Appium/NoSdk/iOS`
