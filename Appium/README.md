@@ -1,23 +1,9 @@
 # Applanga Demo - Android Weather App
 
-This project includes two sample apps both for iOS and Android that demonstrate Applanga's automatic localization and hiddenId generation, as well as automated screenshot uploads. Using Applanga's command line tools and Appium.You will find this sample apps in appium-example/NoSdk/Android or appium-example/NoSdk/iOS respectively.
-
 # Intro
+The projects in this repo demonstrate how to use the Applanga Command Line Interface [ApplangaCLI](https://github.com/applanga/applanga-cli) in combination with Appium [Appium](http://appium.io/docs/en/about-appium/getting-started/) to automatically generate and upload screenshots to Applanga without the need to integrate any Applanga SDK to provide context to translators so they can produce better translations as well as for review and testing purposes. 
 
-### What is Applanga?
-Applanga is a set of tools used for localising (translating) web and mobile applications. 
-
-With the ApplangaSDK a user can update string values within their application without having to release a new version of the app. The ApplangaSDK can also find and upload all strings within an application and upload them to the Applanga dashboard. Once in the dashboard, Strings can be easily translated and managed. Screenshots of the pages/screens within an app can also be uploaded to the applanga dashboard so that translators can see the context of the strings they are working on.  
-
-More info [here](https://www.applanga.com/)
-
-### What is Appium?
-
-Appium is an automated testing tool for mobile devices. 
-
-With appium, you can write command scripts that remote control an app running on a simulator or a real device. These scripts can be written in multiple different languages.
-
-More info [here](http://appium.io/)
+This project includes two sample apps both for iOS and Android that demonstrate Applanga's automatic localization and hiddenId generation, as well as automated screenshot uploads. You will find android app in appium-example/NoSdk/Android or iOS sample app at appium-example/NoSdk/iOS respectively.
 
 
 ### Using appium and applanga together
@@ -52,8 +38,7 @@ It also contains tools in the form of a node package to make interacting with Ap
 
 6: [ApplangaCLI](https://github.com/applanga/applanga-cli)
 
-### Step by Step Guide
-Please follow along the next few steps and you should be able to have the demo up and running with relative ease.
+
 
 #### Node setup
 
@@ -66,6 +51,7 @@ You should be able to just run `npm install` in appium-example/NoSdk/Android or 
 
 In order to make this demo work you will need to install Applanga CLI tools for your command line interface. Instructions to install and initialize are going to be on its github [page](https://github.com/applanga/applanga-cli). This is applanga's command line interface we use this in the example instead of an usual sdk in order to push our strings to your applanga dashboard and update your translations accordingly.
 
+<div id="ApplangaJSON"></div>
 #### Applanga JSON Configuration 
 
 After initializing Applanga CLI with `applanga init` you should have an .applanga.json object on your root folder,make sure to initiate in AppiumNoSdkExample/Android or AppiumNoSdkExample/iOS  since the scripts automatically read your api key from this file . According to your selections and type of project you should have a configuration on the file similar to this e.g.
@@ -132,16 +118,36 @@ Now lets push our source strings to our Applanga dashboard you can do this with 
 
 Once you've added your translations in the Applanga dashboard you can go ahead and pull those translations with `applanga pull` more info on this command [here](https://github.com/applanga/applanga-cli#push--pull-translation-files).
 
-* **Once you've pulled your source and target should have invisible id's. Since they are zero width characters youll need a plugin to see them in your preferred editor and on iOS. Android Studio shows zero width characters by default on their xml files.**
+* **Once you've pulled your source and target should have invisible id's. Since they are zero width characters youll need a plugin to see them in your preferred editor and on iOS. Android Studio shows zero width characters by default on their xml files.** 
 
-#### Running screenshot tests
+<div id="scripts"></div>
+#### Running Scripts
 
 Make sure you have appium instance running with the command `appium` in terminal in order for the tests to work. More info more info on these commands [here](https://github.com/applanga/applanga-cli#push--pull-translation-files).
 
-Make sure to be in the path AppiumnoSdkExample/Android then run `./takeSourceLanguageScreenShots` this will take the source language screenshots with the location of the strings in each screen.
+Make sure to be in the path appium-example/NoSdk/iOS or appium-example/NoSdk/Android then run `node takeSourceLanguageScreenShots` this will take the source language screenshots with the location of the strings in each screen.
 
 \***Note:** The source language script assumes your source is in english or en-US you can go ahead and change that in the variables for it in the respective function takeAndroidScreenshots/takeIosScreenshots.
 
-Make sure to be in the path AppiumnoSdkExample/Android then run `./takeTargetLanguagesScreenShots` this will navigate through the translations and take screenshots with the location of the strings in each screen.
+Make sure to be in the path  appium-example/NoSdk/iOS or appium-example/NoSdk/Android then run `node takeTargetLanguagesScreenShots` this will navigate through the translations and take screenshots with the location of the strings in each screen.
 
 \***Note:** The target languages script has preloaded locales and langauges which you can go ahead and change in the variables for it in the respective arrays languagesToUse/localesToUse.
+
+
+### Step by Step Guide
+Please follow along the next few steps and you should be able to have the demo up and running with relative ease.
+
+1. Change to the demo directory in your computer `cd/appium-example/Appium/NoSdk/Android` or `cd/appium-example/Appium/NoSdk/iOS`
+2. Now lets install our dependencies if you hadn't done so yet,type `npm install`
+3. Now if you hadn't done so go ahead an initiate applanga `applanga init` , please refer to the Applanga CLI and JSON configuration of this guide if any questions.
+4. It will ask you for your access token you can get yours in your Applanga dashboard by going to Project Settings on top of the page and then pressing the Show API Token button.
+5. After this the applanga cli will ask for a file format according to project for the iOS one select option `11` since the project comes with preloaded .strings file as for the android project go ahead and select `1` which is the standard Android xml format.
+6. Go ahead and hit `enter` for the rest of the options given by the cli this are the default values and will work well for either of the sample projects.
+7. Now modify you .applanga.json file genereated in either project with the hidden id feature if you choose to use it more details in [Applanga JSON](#ApplangaJSON) Configuration part of this file.
+8. Now we open our respective project IDE Android Studio for appium-example/Appium/NoSdk/Android/WeatherSample or Xcode for appium-example/Appium/NoSdk/iOS/WeatherSample
+9. Now go ahead and build the project in either IDE.
+10. For android make sure to have a supported simulator running before running the scripts, no need to do this for iOS the script will automatically open simulator app.
+11. Make sure to have an Appium instance running before running the scripts by typing `appium` on a terminal window
+12. You should now have everything ready to be able to run your scripts you can go ahead and run `node takeSourceLanguageScreenShots` or `node takeTargetLanguagesScreenShots` for more information on how to modify this for additional languages or different simulators please refer to the [Running Scripts](#scripts) section of this readme.
+
+
