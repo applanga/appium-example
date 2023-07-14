@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() ,
 
         setFragmentView(homeFragment)
 
-        binding.bottomNav?.setOnNavigationItemSelectedListener {
+        binding.bottomNav.setOnNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.nav_home -> setFragmentView(homeFragment)
                 R.id.nav_daily -> setFragmentView(dailyFragment)
@@ -77,7 +77,7 @@ class MainActivity : AppCompatActivity() ,
 
     private fun getApiData() {
         val settings = WeatherAppApplication.app.sharedPrefrencesManager
-        val city = settings.getString(Keys.CITY_KEY.toString(), "New York")
+        val city = settings.getString(Keys.CITY_KEY.toString(), getString(R.string.settings_default_location))
         val unit = settings.getString(Keys.UNITS_KEY.toString(), "metric")
 
         if (city != null && unit != null) {
@@ -111,7 +111,7 @@ class MainActivity : AppCompatActivity() ,
 
         if (settings.getBoolean(Keys.FIRST_RUN_KEY.toString(), true)) {
             settings.let {
-                it.putString(Keys.CITY_KEY.toString(), "New York")
+                it.putString(Keys.CITY_KEY.toString(), getString(R.string.settings_default_location))
                 it.putString(Keys.UNITS_KEY.toString(), "metric")
                 it.putString(Keys.LANGUAGE_KEY.toString(), "en")
                 it.putInt(Keys.DAYS_NUMBER_KEY.toString(), 5)

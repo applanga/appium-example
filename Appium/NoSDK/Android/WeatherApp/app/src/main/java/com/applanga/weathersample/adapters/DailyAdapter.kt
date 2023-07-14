@@ -35,7 +35,7 @@ class DayViewHolder(val context: Context, val binding: ItemDayBinding): Recycler
     private fun getTime() : String {
         val time = binding.dayItem!!.dt_txt.substring(11, 16)
         val suffix = if (binding.dayItem!!.dt_txt.substring(11, 13).toInt() > 11) {
-            context?.getString(R.string.daily_pm).toString()
+            context.getString(R.string.daily_pm).toString()
         } else context.getString(R.string.daily_am)
         return "$time $suffix"
     }
