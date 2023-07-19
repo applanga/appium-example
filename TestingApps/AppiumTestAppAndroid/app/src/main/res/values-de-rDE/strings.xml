@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">appiumTestApp</string>
-    <string name="page1">local</string>
-    <string name="page2">local</string>
-    <string name="button">local</string>
-</resources>

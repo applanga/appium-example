@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Applanga>
-    <ReferenceStrings lang="baseLanguage"/>
-    <AllowStrings>app_name,page1,page2,button,title_activity_2,first_fragment_label,second_fragment_label,next,previous,hello_first_fragment,hello_second_fragment</AllowStrings>
-    <PluginVersion>app:4.0.181,</PluginVersion>
-    <PackageName>com.example.appiumtestapp</PackageName>
-    <Navigation id="FirstFragment" label="first_fragment_label" layoutName="nav_graph"/>
-    <Navigation id="SecondFragment" label="second_fragment_label" layoutName="nav_graph"/>
-</Applanga>

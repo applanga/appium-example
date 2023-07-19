@@ -1,0 +1,41 @@
+{
+    "app": {
+        "access_token": "63fe095a2b4936eedc9f2e2d!28fd2adc3787856a647e84422d8c110b",
+        "base_language": "en",
+        "pull": {
+            "target": [
+                {
+                    "export_empty": true,
+                    "file_format": "ios_strings",
+                    "language": "en",
+                    "path": "./WeatherSample/WeatherSample/Base.lproj/Localizable.strings",
+                    "includeInvisibleId": true
+                },
+                {
+                    "exclude_languages": [
+                        "en"
+                    ],
+                    "file_format": "ios_strings",
+                    "path": "./WeatherSample/WeatherSample/<language>.lproj/Localizable.strings",
+                    "includeInvisibleId": true
+                }
+            ]
+        },
+        "push": {
+            "source": [
+                {
+                    "file_format": "ios_strings",
+                    "language": "en",
+                    "path": "./WeatherSample/WeatherSample/Base.lproj/Localizable.strings"
+                },
+                {
+                    "exclude_languages": [
+                        "en"
+                    ],
+                    "file_format": "ios_strings",
+                    "path": "./WeatherSample/WeatherSample/<language>.lproj/Localizable.strings"
+                }
+            ]
+        }
+    }
+}
