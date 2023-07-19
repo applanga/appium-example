@@ -6,12 +6,9 @@ This script opens 4 different screens in a simple app in 3 different languages a
 On your Applanga Dashboard, not only can you view these screenshots, but you can also easily identify the corresponding translations and their linkage to their respective translation IDs.
 
 ### Prerequisites 
+1. [Install Applanga CLI](https://www.applanga.com/docs/integration-documentation/cli#installation) (version 1.0.86 or above)
 
-1. [Install Appium](https://appium.io/docs/en/2.0/quickstart/install/) and [install the UiAutomator2](https://appium.io/docs/en/2.0/quickstart/uiauto2-driver/) driver (tested with 2.0.0-beta.57)
-
-2. [Install Applanga CLI](https://www.applanga.com/docs/integration-documentation/cli#installation) (version 1.0.86 or above)
-
-3. [Install Nodejs](https://nodejs.org)  (tested with node v16.13.2)
+2. [Install Nodejs](https://nodejs.org)  (tested with node v16.13.2)
 
 
 
@@ -23,5 +20,7 @@ On your Applanga Dashboard, not only can you view these screenshots, but you can
 4. Pull your localizations with `includeInvisibleId` enabled (see step 2) with `applanga pull`. In Android Studio you will now see that every translation has a prefix of unicode characters. We need them to identify the strings on the screen properly.
 5. Build your APK (With Android Studio or the following command: `cd WeatherApp && ./gradlew clean assembleDebug`)
 6. Run `npm install`
-7. Start Appium with `appium`
-8. Run the upload screenshot script with `node runScreenshotUpload.js`
+7. Start Appium with `npx appium` in a separate terminal tab
+8. Open an Android Emulator or connect a device with USB Debugging Enabled
+9. Run the upload screenshot script with `node runScreenshotUpload.js`
+10. Go into your Applanga dashboard and you will see screenshots connected with their corresponding string ids

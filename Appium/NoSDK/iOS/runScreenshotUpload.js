@@ -3,29 +3,25 @@ const applanga = require('applanga-appium');
 
 //required setup for webdriver.io it varies according to platform wether android or iOS please consult readme for more info and links
 function getOptions(country, language) {
-  var androidOptions = {
+  var options = {
     port: 4723,
     capabilities: {
-      platformName: 'Android',
+      platformName: 'iOS',
       'appium:locale': country,
       'appium:language': language,
-      'appium:app':
-        __dirname + '/WeatherApp/app/build/outputs/apk/debug/app-debug.apk',
-      'appium:appPackage': 'com.applanga.weathersample',
-      'appium:appActivity': 'com.applanga.weathersample.MainActivity',
-      'appium:automationName': 'UiAutomator2',
+      'appium:app': __dirname + '/WeatherSample.app',
+      'appium:automationName': 'XCUITest',
     },
   };
-  return androidOptions;
+  return options;
 }
 
 const locales = [
-   { country: 'US', language: 'en' },
-   { country: 'DE', language: 'de' },
+  { country: 'US', language: 'en' },
+  { country: 'DE', language: 'de' },
   { country: 'US', language: 'es' },
 ];
-const buttonsToPressAndroid = ['nav_daily', 'nav_about', 'nav_settings'];
-
+const buttonsToPress = ['nav_daily', 'nav_about', 'nav_settings'];
 
 //our main function executing our methods
 async function main() {
@@ -39,24 +35,21 @@ async function main() {
 async function navigateAndRunScreenshots(country, language) {
   var client = await wdio.remote(getOptions(country, language));
   var tagName = 'home';
-  let progressBar = await client.$(getSelectorByResourceId('home_progress_bar_spinner'))
-  await progressBar.waitForExist({ timeout: 5000, reverse: true }); 
-  for (let j = 0; j < buttonsToPressAndroid.length + 1; j++) {
-    await applanga.captureScreenshot(
-      client,
-      tagName,
-    );
-    if (j == buttonsToPressAndroid.length) break;
-    tagName = buttonsToPressAndroid[j];
+  let progressBar = await client.$(
+    getSelectorByResourceId('home_progress_bar_spinner')
+  );
+  await progressBar.waitForExist({ timeout: 5000, reverse: true });
+  for (let j = 0; j < buttonsToPress.length + 1; j++) {
+    await applanga.captureScreenshot(client, tagName);
+    if (j == buttonsToPress.length) break;
+    tagName = buttonsToPress[j];
     await pressButtons(client, tagName); // tagName is the button name here
     await client.pause(1000);
   }
 }
 
 function getSelectorByResourceId(resourceId) {
-  return  'android=new UiSelector().resourceId("com.applanga.weathersample:id/' +
-  resourceId +
-  '")';
+  return '~' + resourceId 
 }
 
 //function to navigate through our screens in our sample app
