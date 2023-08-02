@@ -1,19 +1,27 @@
 {
-  "name": "nosdkexample",
-  "version": "1.0.0",
-  "description": "",
-  "main": "androidScreenShots.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "wdio": "wdio run wdio.conf.js"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "applanga-appium": "github:applanga/applanga-appium"
-  },
-  "devDependencies": {
-    "appium": "^2.0.0",
-    "appium-uiautomator2-driver": "^2.29.2"
-  }
+    "name": "nosdkexample",
+    "version": "1.0.0",
+    "description": "",
+    "main": "androidScreenShots.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "wdio": "wdio run wdio.conf.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "applanga-appium": "github:applanga/applanga-appium"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.22.9",
+        "@babel/preset-env": "^7.22.9",
+        "@babel/register": "^7.22.5",
+        "@wdio/appium-service": "^8.13.12",
+        "@wdio/cli": "^8.13.12",
+        "@wdio/junit-reporter": "^8.12.2",
+        "@wdio/local-runner": "^8.13.12",
+        "@wdio/mocha-framework": "^8.12.1",
+        "appium": "^2.0.0",
+        "appium-uiautomator2-driver": "^2.29.2"
+    }
 }
