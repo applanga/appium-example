@@ -16,7 +16,7 @@ On your Applanga Dashboard, not only can you view these screenshots, but you can
 1. Create (or use an existing) Applanga Project from the Applanga Dashboard. Add the following languages to make full use of this example: `en` as base language, `de` and `es-US`. 
 2. Add your API Token to the existing `.applanga.json` file. Use the field called `access_token`. If you want to learn more about the `.applanga.json` file format and it's configurations go to the [Applanga CLI Documentation](https://www.applanga.com/docs/integration-documentation/cli). Pay attention to the `includeInvisibleId` config which is enabled for this project.
 3. Push your localizations to your empty Applanga project with `applanga push`. 
-4. Pull your localizations with `includeInvisibleId` enabled (see step 2) with `applanga pull`. In Android Studio you will now see that every translation has a prefix of unicode characters. We need them to identify the strings on the screen properly.
+4. Pull your localizations with `includeInvisibleId` enabled (see step 2) with `applanga pull`. In XCode it wouldn't be visible, but if you copy a string to some other editor like VSCode, you should see that every translation has a prefix of unicode characters. We need them to identify the strings on the screen properly.
 5. Build your app and copy the `WeatherSample.app` directory to this directory. There are several ways to find the app folder, one is [described here](https://stackoverflow.com/a/26201618). 
 6. Run `npm install`
 7. Start Appium with `npx appium` in a separate terminal tab
