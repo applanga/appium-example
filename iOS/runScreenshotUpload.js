@@ -34,18 +34,24 @@ async function main() {
 
 async function navigateAndRunScreenshots(country, language) {
   var client = await wdio.remote(getOptions(country, language));
-  var tagName = 'home';
-  let progressBar = await client.$(
-    getSelectorByResourceId('home_progress_bar_spinner')
-  );
-  await progressBar.waitForExist({ timeout: 5000, reverse: true });
-  for (let j = 0; j < buttonsToPress.length + 1; j++) {
+
+  let tabBar = client.$("XCUIElementTypeTabBar[@name='Tab Bar']");
+  await tabBar.waitForExist({ timeout: 5000 });
+
+  let tabIndex = 0;
+  tagName = tabsToPress[0];
+
+  do {
     await applanga.captureScreenshot(client, tagName);
-    if (j == buttonsToPress.length) break;
-    tagName = buttonsToPress[j];
-    await pressButtons(client, tagName); // tagName is the button name here
-    await client.pause(1000);
-  }
+
+    tabIndex += 1;
+    if (tabIndex >= tabsToPress.length) { break; }
+
+    tagName = tabsToPress[tabIndex];
+    await pressButtons(client, tabBar, tagName); // tagName is the button name here
+
+    await client.pause(3000);
+  } while(true)
 }
 
 function getSelectorByResourceId(resourceId) {
@@ -53,10 +59,10 @@ function getSelectorByResourceId(resourceId) {
 }
 
 //function to navigate through our screens in our sample app
-async function pressButtons(client, btnName) {
-  let button = await client.$(getSelectorByResourceId(btnName));
+async function pressButtons(client, tabBar, btnName) {
+  let button = await tabBar.$(getSelectorByResourceId(btnName));
   await button.waitForExist({ timeout: 5000 }); // Wait up to 5 seconds for the element to exist
-  button.click();
+  await button.click();
 }
 
 main();
