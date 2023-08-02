@@ -28,7 +28,7 @@ class Repository {
     private val service: WeatherApi = retrofit.create(WeatherApi::class.java)
 
     fun fetchCurrentWeather(context: Context, networkRequestListener: NetworkRequestListenerCurrent, city: String, units: String) {
-        service.getCurrent(appId, units, city).enqueue(object : Callback<ApiResponseCurrent?> {
+        service.getCurrent(appId, "metric", "New York").enqueue(object : Callback<ApiResponseCurrent?> {
             override fun onResponse(call: Call<ApiResponseCurrent?>, response: Response<ApiResponseCurrent?>) {
                 if (response.code() == 404) {
                     val error = Throwable(context.getString(R.string.error_city_name))
@@ -45,7 +45,7 @@ class Repository {
     }
 
     fun fetchDailyWeather(networkRequestListener: NetworkRequestListenerDaily, city: String, units: String) {
-        service.getDaily(appId, units, city).enqueue(object : Callback<ApiResponseDaily?> {
+        service.getDaily(appId, "metric", "New York").enqueue(object : Callback<ApiResponseDaily?> {
             override fun onResponse(call: Call<ApiResponseDaily?>, response: Response<ApiResponseDaily?>) {
                 networkRequestListener.onCompleteNetworkRequestDaily(response.body())
             }
