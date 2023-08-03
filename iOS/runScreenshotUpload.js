@@ -21,7 +21,8 @@ const locales = [
   { country: 'DE', language: 'de' },
   { country: 'US', language: 'es' },
 ];
-const buttonsToPress = ['nav_daily', 'nav_about', 'nav_settings'];
+
+const tabsToPress = ['Home', 'Daily Forecast', 'About', 'Settings'];
 
 //our main function executing our methods
 async function main() {
@@ -55,7 +56,7 @@ async function navigateAndRunScreenshots(country, language) {
 }
 
 function getSelectorByResourceId(resourceId) {
-  return '~' + resourceId 
+  return "//*/XCUIElementTypeButton[@name='" + resourceId + "']";
 }
 
 //function to navigate through our screens in our sample app
