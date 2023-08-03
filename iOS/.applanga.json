@@ -12,6 +12,14 @@
                     "includeInvisibleId": true
                 },
                 {
+                    "export_empty": true,
+                    "file_format": "ios_strings",
+                    "language": "en",
+                    "path": "./WeatherSample/WeatherSample/Base.lproj/Main.strings",
+                    "tag": "MainStoryboard",
+                    "includeInvisibleId": true
+                },
+                {
                     "exclude_languages": [
                         "en"
                     ],
@@ -27,6 +35,12 @@
                     "file_format": "ios_strings",
                     "language": "en",
                     "path": "./WeatherSample/WeatherSample/Base.lproj/Localizable.strings"
+                },
+                {
+                    "file_format": "ios_strings",
+                    "language": "en",
+                    "path": "./WeatherSample/WeatherSample/Base.lproj/Main.strings",
+                    "tag": "MainStoryboard"
                 },
                 {
                     "exclude_languages": [
