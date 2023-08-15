@@ -32,6 +32,7 @@
 		5366D91E26303FC900978EE7 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366D91D26303FC900978EE7 /* AboutViewController.swift */; };
 		5366D92126303FD400978EE7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366D92026303FD400978EE7 /* SettingsViewController.swift */; };
 		5DF0BD6328626AA5003CF42D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5DF0BD6128626AA5003CF42D /* Localizable.strings */; };
+		705DEF3D2A8BA85300A4E5B8 /* Main.strings in Resources */ = {isa = PBXBuildFile; fileRef = 705DEF3B2A8BA85200A4E5B8 /* Main.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		5DC70DDD286A3876004CB0FE /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		5DC70DDE286A3876004CB0FE /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5DF0BD6228626AA5003CF42D /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		705DEF3C2A8BA85200A4E5B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Main.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 				5366D8BD262ECA6000978EE7 /* AppDelegate.swift */,
 				5366D8BF262ECA6000978EE7 /* SceneDelegate.swift */,
 				5366D8C3262ECA6000978EE7 /* Main.storyboard */,
+				705DEF3B2A8BA85200A4E5B8 /* Main.strings */,
 				5366D8C6262ECA6100978EE7 /* Assets.xcassets */,
 				5366D8C8262ECA6100978EE7 /* LaunchScreen.storyboard */,
 				5366D8CB262ECA6100978EE7 /* Info.plist */,
@@ -324,6 +327,7 @@
 				5366D8C5262ECA6000978EE7 /* Main.storyboard in Resources */,
 				5352E4B126676625008D893B /* settings.png in Resources */,
 				5366D8EC262EDD3500978EE7 /* Localizable.stringsdict in Resources */,
+				705DEF3D2A8BA85300A4E5B8 /* Main.strings in Resources */,
 				5352E4A7266765FF008D893B /* about-page.css in Resources */,
 				5352E4A926676605008D893B /* about-page.html in Resources */,
 			);
@@ -396,6 +400,14 @@
 				5DC70DDE286A3876004CB0FE /* de */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		705DEF3B2A8BA85200A4E5B8 /* Main.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				705DEF3C2A8BA85200A4E5B8 /* Base */,
+			);
+			name = Main.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

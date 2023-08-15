@@ -22,7 +22,7 @@ const locales = [
   { country: 'US', language: 'es' },
 ];
 
-const tabsToPress = ['Home', 'Daily Forecast', 'About', 'Settings'];
+const tabsToPress = ['tab_home', 'tab_daily_forecast', 'tab_about', 'tab_settings'];
 
 //our main function executing our methods
 async function main() {
@@ -49,19 +49,19 @@ async function navigateAndRunScreenshots(country, language) {
     if (tabIndex >= tabsToPress.length) { break; }
 
     tagName = tabsToPress[tabIndex];
-    await pressButtons(client, tabBar, tagName); // tagName is the button name here
+    await pressButtons(client, tagName); // tagName is the button name here
 
     await client.pause(3000);
   } while(true)
 }
 
 function getSelectorByResourceId(resourceId) {
-  return "//*/XCUIElementTypeButton[@name='" + resourceId + "']";
+  return '//XCUIElementTypeButton[@name="' + resourceId + '"]'; 
 }
 
 //function to navigate through our screens in our sample app
-async function pressButtons(client, tabBar, btnName) {
-  let button = await tabBar.$(getSelectorByResourceId(btnName));
+async function pressButtons(client, btnName) {
+  let button = await client.$(getSelectorByResourceId(btnName));
   await button.waitForExist({ timeout: 5000 }); // Wait up to 5 seconds for the element to exist
   await button.click();
 }

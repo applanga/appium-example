@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g9n-dm-uRw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g9n-dm-uRw">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -33,9 +34,13 @@
         <scene sceneID="Jh2-nD-tJY">
             <objects>
                 <navigationController id="wxx-su-LNb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Daily Forecast" image="calendar" catalog="system" id="9Z9-nc-5aa" userLabel="dailyNav"/>
+                    <tabBarItem key="tabBarItem" title="Daily Forecast" image="calendar" catalog="system" id="9Z9-nc-5aa" userLabel="dailyNav">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="tab_daily_forecast"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gfZ-ID-tsQ">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -55,7 +60,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Ja-rc-MKb">
-                                <rect key="frame" x="0.0" y="143" width="414" height="776"/>
+                                <rect key="frame" x="0.0" y="147" width="414" height="776"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="776" id="JF5-YA-EjO"/>
@@ -63,7 +68,7 @@
                                 <color key="sectionIndexBackgroundColor" name="ApplangaBlue"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DayCell" rowHeight="120" id="VT2-vM-5hi" customClass="DayCell" customModule="WeatherSample" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="120"/>
+                                        <rect key="frame" x="0.0" y="50" width="414" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VT2-vM-5hi" id="jLS-B1-fcA">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
@@ -135,7 +140,7 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Displaying X of next days" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIM-3W-BoM">
-                                <rect key="frame" x="0.0" y="88" width="414" height="55"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="55"/>
                                 <color key="backgroundColor" name="ApplangaBlue"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="BSt-2l-uFK"/>
@@ -170,9 +175,13 @@
         <scene sceneID="eBH-nc-Cr7">
             <objects>
                 <navigationController id="XVd-N7-lzf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="About" image="doc.plaintext" catalog="system" id="iix-Rq-vHI" userLabel="aboutNav"/>
+                    <tabBarItem key="tabBarItem" title="About" image="doc.plaintext" catalog="system" id="iix-Rq-vHI" userLabel="aboutNav">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="tab_about"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vez-tR-tGn">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -187,9 +196,13 @@
         <scene sceneID="74t-Vy-YVL">
             <objects>
                 <navigationController storyboardIdentifier="HomeViewController" id="Nd3-bR-Dlj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="sun.max.fill" catalog="system" id="Ieh-sB-BAN" userLabel="homeNav"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="sun.max.fill" catalog="system" id="Ieh-sB-BAN" userLabel="homeNav">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="tab_home"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="g0V-Gn-6pT">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -209,23 +222,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mappin.and.ellipse" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="sbj-cT-ers">
-                                <rect key="frame" x="102" y="101.5" width="36" height="50"/>
+                                <rect key="frame" x="102" y="105.5" width="36" height="50"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="36" id="Q8s-Km-ltD"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jBE-2f-CV6">
-                                <rect key="frame" x="127" y="320" width="160" height="160"/>
+                                <rect key="frame" x="127" y="324" width="160" height="156"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wyI-rm-uDS">
-                                <rect key="frame" x="20" y="159" width="374" height="41"/>
+                                <rect key="frame" x="20" y="163" width="374" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tem" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fps-b8-MaH">
-                                <rect key="frame" x="147" y="223" width="120" height="77"/>
+                                <rect key="frame" x="147" y="227" width="120" height="77"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="64"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -324,10 +337,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A3D-kX-KDh">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="721"/>
                                 <subviews>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Tap-vk-Lut">
-                                        <rect key="frame" x="197" y="352.5" width="20" height="20"/>
+                                        <rect key="frame" x="197" y="350.5" width="20" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="J2a-zB-h8e"/>
                                             <constraint firstAttribute="height" constant="20" id="OdZ-bd-F7k"/>
@@ -430,9 +443,13 @@
         <scene sceneID="oCk-gb-3AB">
             <objects>
                 <navigationController id="Qhd-vt-qIm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" image="gearshape" catalog="system" id="Edk-lI-Jxk" userLabel="settingsNav"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gearshape" catalog="system" id="Edk-lI-Jxk" userLabel="settingsNav">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="tab_settings"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Chv-cP-Tfe">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -452,7 +469,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9pw-Ty-e2N">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="721"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jey-PV-wca" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1600"/>
@@ -678,7 +695,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hf3-91-Ynu">
-                                <rect key="frame" x="20" y="125" width="374" height="85"/>
+                                <rect key="frame" x="20" y="129" width="374" height="81"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mlX-Ts-9Ix">
                                         <rect key="frame" x="8" y="8" width="146" height="27"/>
@@ -959,19 +976,19 @@
     </scenes>
     <resources>
         <image name="Logo" width="256" height="256"/>
-        <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="calendar" catalog="system" width="128" height="107"/>
         <image name="calendar.png" width="512" height="512"/>
         <image name="city.png" width="512" height="512"/>
         <image name="doc.plaintext" catalog="system" width="115" height="128"/>
-        <image name="gearshape" catalog="system" width="128" height="121"/>
-        <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
+        <image name="gearshape" catalog="system" width="128" height="123"/>
+        <image name="mappin.and.ellipse" catalog="system" width="117" height="128"/>
         <image name="settings.png" width="512" height="512"/>
-        <image name="sun.max.fill" catalog="system" width="128" height="124"/>
+        <image name="sun.max.fill" catalog="system" width="128" height="125"/>
         <namedColor name="ApplangaBlue">
             <color red="0.059999998658895493" green="0.57999998331069946" blue="0.84200000762939453" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
