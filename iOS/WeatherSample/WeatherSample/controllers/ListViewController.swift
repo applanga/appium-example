@@ -40,8 +40,9 @@ class ListViewController: UIViewController {
         
         self.navigationItem.title = NSLocalizedString("daily_title", comment: "")
         self.navigationController?.title = NSLocalizedString("daily_title", comment: "")
-            
-      displayedDays.text = "Displaying next 5 days" //NSString.localizedStringWithFormat(NSString(string:(Applanga.localizedString(forKey: "daily_displayed_days", withDefaultValue: "Days display", andArguments: nil, andPluralRule: ALPluralRuleForQuantity(UInt(displayedDaysNum))))), displayedDaysNum) as String
+        
+        
+        displayedDays.text = NSString.localizedStringWithFormat(NSLocalizedString("daily_displayed_days", comment: "") as NSString, displayedDaysNum) as String
         
         days = getDays()
         tableView.reloadData()
