@@ -11,7 +11,7 @@
     "license": "ISC",
     "dependencies": {
         "appium-webdriveragent": "^4.10.2",
-        "applanga-appium": "file:../../applanga-appium"
+	"applanga-appium": "github:applanga/applanga-appium"
     },
     "devDependencies": {
         "@babel/core": "^7.22.9",
