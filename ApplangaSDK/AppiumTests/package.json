@@ -7,6 +7,7 @@
     "devDependencies": {
         "appium": "^2.0.0",
         "appium-espresso-driver": "^2.25.9",
-        "appium-uiautomator2-driver": "^2.29.2"
+        "appium-uiautomator2-driver": "^2.29.2",
+        "appium-xcuitest-driver": "^5.8.1"
     }
 }

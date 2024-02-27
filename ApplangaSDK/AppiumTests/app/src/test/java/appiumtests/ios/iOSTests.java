@@ -30,7 +30,6 @@ class iOSTests {
     
     By alertBy = By.className("XCUIElementTypeAlert");
     
-    @BeforeEach
     public void setupIOS(boolean withShowIdMode) throws MalformedURLException {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platformName", "iOS");
@@ -48,7 +47,8 @@ class iOSTests {
         // caps.setCapability("autoAcceptAlerts", "true");
         caps.setCapability("locale", "US");
         caps.setCapability("language", "en");
-        caps.setCapability("app", "/Users/alec/projects/applanga/Sample-Apps/iOS/UIKit-Cocoapods/trash/WeatherSample.app");
+        String appPath = "/xxxxxxxxxx/WeatherSample.app";
+        caps.setCapability("app", appPath);
         caps.setCapability("automationName", "XCUITest");
         driver = new IOSDriver(new URL("http://127.0.0.1:4723"), caps);
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -88,30 +88,9 @@ class iOSTests {
         String jsonStr = "applanga:" + json;
         driver.setClipboardText(jsonStr);
         
-        
         String link = "xcrun simctl notify_post booted com.applanga:screenshot_start";
         ProcessBuilder processBuilder = new ProcessBuilder();
-        Process process;
         processBuilder.command("sh", "-c", link);
-        try {
-            process = processBuilder.start();
-            
-            // BufferedReader stdInput = new BufferedReader(new InputStreamReader(process.getInputStream()));
-            // BufferedReader stdError = new BufferedReader(new InputStreamReader(process.getErrorStream()));
-            
-            // System.out.println("Here is the standard output of the command:\n");
-            // String s = null;
-            // while ((s = stdInput.readLine()) != null) {
-            //     System.out.println(s);
-            // }
-            // Read any errors from the attempted command
-            // System.out.println("Here is the standard error of the command (if any):\n");
-            // while ((s = stdError.readLine()) != null) {
-            //     System.out.println(s);
-            // }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
         
         wait.until(ExpectedConditions.visibilityOfElementLocated(alertBy));
         driver.switchTo().alert().accept();
