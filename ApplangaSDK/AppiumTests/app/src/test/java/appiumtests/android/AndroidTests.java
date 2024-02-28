@@ -49,7 +49,7 @@ class AndroidTests {
    @Test
    public void basicTest() {
       wait.until(ExpectedConditions.visibilityOfElementLocated(contentBy));
-      applangaCaptureScreenshot("splash");
+      applangaCaptureScreenshot("Home-Android");
    }
    
    public void applangaCaptureScreenshot(String tagName) {

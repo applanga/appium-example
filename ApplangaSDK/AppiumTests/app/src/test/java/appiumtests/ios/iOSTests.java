@@ -58,10 +58,10 @@ class iOSTests {
     public void basicTest() throws MalformedURLException {
         setupIOS(true);
         wait.until(ExpectedConditions.visibilityOfElementLocated(contentBy));
-        applangaCaptureScreenshot("home");
+        applangaCaptureScreenshot("Home-iOS");
         driver.quit();
         setupIOS(false);
-        applangaCaptureScreenshot("home");
+        applangaCaptureScreenshot("Home-iOS");
     }
     
     public void applangaCaptureScreenshot(String tagName) {
