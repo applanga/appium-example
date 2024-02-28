@@ -20,6 +20,5 @@ On your Applanga Dashboard, not only can you view these screenshots, but you can
 5. Build your app and copy the `WeatherSample.app` directory to this directory. There are several ways to find the app folder, one is [described here](https://stackoverflow.com/a/26201618). 
 6. Run `npm install`
 7. Start Appium with `npx appium` in a separate terminal tab
-8. Open an Android Emulator or connect a device with USB Debugging Enabled
-9. Run the upload screenshot script with `node runScreenshotUpload.js`
-10. Go into your Applanga dashboard and you will see screenshots connected with their corresponding string ids
+8. Run the upload screenshot script with `node runScreenshotUpload.js`
+9. Go into your Applanga dashboard and you will see screenshots connected with their corresponding string ids
