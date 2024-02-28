@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="142b0e42-9a04-4a00-9c03-750bd97bbee4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Android/.applanga.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/.applanga.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iOS/.applanga.json" beforeDir="false" afterPath="$PROJECT_DIR$/../iOS/.applanga.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iOS/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../iOS/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iOS/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../iOS/package.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ProjectId" id="2cfsjNs3TFMOSxMVZH882wGJt4W" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "cidr.known.project.marker": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "last_opened_file_path": "/Users/alec/projects/applanga/appium-example/ApplangaSDK",
+    "show.migrate.to.gradle.popup": "false"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="142b0e42-9a04-4a00-9c03-750bd97bbee4" name="Changes" comment="" />
+      <created>1708514104332</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708514104332</updated>
+    </task>
+    <servers />
+  </component>
+</project>
