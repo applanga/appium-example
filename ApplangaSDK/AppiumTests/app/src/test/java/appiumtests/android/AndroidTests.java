@@ -34,7 +34,6 @@ class AndroidTests {
       caps.setCapability("platformName", "Android");
       caps.setCapability("skipUnlock", "true");
       caps.setCapability("appPackage", packageName);
-      // /Users/alec/projects/applanga/appium-example/ApplangaSDK/AppiumTests/app
       String currentDir = System.getProperty("user.dir");
       String appPath = currentDir + "/../../Sample-Apps/Android/WeatherApp/app/build/intermediates/apk/debug/app-debug.apk";
       caps.setCapability("app", appPath);
