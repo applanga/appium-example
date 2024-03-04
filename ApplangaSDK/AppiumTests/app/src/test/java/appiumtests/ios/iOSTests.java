@@ -48,7 +48,7 @@ class iOSTests {
         // caps.setCapability("autoAcceptAlerts", "true");
         caps.setCapability("locale", "US");
         caps.setCapability("language", "en");
-        String appPath = "/Users/alec/projects/applanga/appium-example/ApplangaSDK/AppiumTests/trash/WeatherSample.app";
+        String appPath = "yourAppPath/WeatherSample.app";
         caps.setCapability("app", appPath);
         caps.setCapability("automationName", "XCUITest");
         driver = new IOSDriver(new URL("http://127.0.0.1:4723"), caps);
