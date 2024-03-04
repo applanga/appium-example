@@ -11,6 +11,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
@@ -91,7 +92,11 @@ class iOSTests {
         String link = "xcrun simctl notify_post booted com.applanga:screenshot_start";
         ProcessBuilder processBuilder = new ProcessBuilder();
         processBuilder.command("sh", "-c", link);
-        
+        try {
+            processBuilder.start();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         wait.until(ExpectedConditions.visibilityOfElementLocated(alertBy));
         driver.switchTo().alert().accept();
         wait.until(ExpectedConditions.visibilityOfElementLocated(screenshotDoneAlertBy));
