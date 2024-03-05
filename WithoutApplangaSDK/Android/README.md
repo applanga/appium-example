@@ -1,9 +1,9 @@
-# Appium + Applanga CLI Screenshot Demo
+# Appium plus Applanga CLI example - Android App
 
-The project demonstrates the usage of the Applanga Command Line Interface [ApplangaCLI](https://github.com/applanga/applanga-cli) in combination with Appium [Appium 2](https://appium.github.io/appium/docs/en/2.0/) to automatically generate and upload screenshots to Applanga without the need to integrate any Applanga SDK to provide context to translators so they can produce better translations as well as for review and testing purposes. 
+The project demonstrates the usage of the [Applanga Command Line Interface (CLI)](https://github.com/applanga/applanga-cli) in combination with [Appium 2](https://appium.github.io/appium/docs/en/2.0/) to automatically generate and upload screenshots to Applanga without the need to integrate any Applanga SDK to provide context to translators so they can produce better translations as well as for review and testing purposes. 
 
-This script opens 4 different screens in a simple app in 3 different languages and takes a screenshot from each screen.
-On your Applanga Dashboard, not only can you view these screenshots, but you can also easily identify the corresponding translations and their linkage to their respective translation IDs.
+This script opens 4 app screens in a simple app in 3 languages, capturing a screenshot from each screen in each language and uploading them to Applanga. 
+After the script has run you will the screenshots in all languages uploaded to your Applanga project and the app strings hosted in that project connected to the corresponding screenshots, ready for in-context review in the Applanga editor interface in the dashboard.  
 
 ### Prerequisites 
 1. [Install Applanga CLI](https://www.applanga.com/docs/integration-documentation/cli#installation) (version 1.0.86 or above)
