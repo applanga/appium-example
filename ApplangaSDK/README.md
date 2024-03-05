@@ -1,20 +1,18 @@
-# Appium & Mobile App with Applanga SDK Example
+# Appium plus Mobile App with Applanga SDK integration Example
 
-Appium is used for testing mobile apps.
-Within a test you can now trigger a screenshot capture and its upload to the Applanga dashboard.
-This functionality works with the **Applanga Android SDK Version 4.0.x** and above and **Applanga iOS SDK Version 3.0.x** and above.
+In this example, the Appium framework is used to run a test script that navigates through a mobile app. Within the Appium test script, you can trigger a screenshot capture and upload it to the connected Applanga project. This functionality is supported with the **Applanga Android SDK Version 4.0.x** and above and **Applanga iOS SDK Version 3.0.x** and above.
 
 # Setup
-This directory is divided into the Appium tests in `AppiumTests` and our sample apps imported as a submodule in `Sample-Apps`.
+This directory is divided into the Appium test scripts in `AppiumTests` and our sample apps imported as a submodule in `Sample-Apps`.
 
 The folder `AppiumTests` contains all the relevant code to make the Applanga screenshot upload work via Appium.
 
-First of all, you have to compile an Android or iOS app, which has the Applanga SDK integrated. In this repository, we use our Sample-Apps to showcase its usage.
+First, you have to compile an Android or iOS app, which has the Applanga SDK integrated. In this repository, we use our Sample-Apps to showcase its usage.
 Integrate your own `applanga_settingsfile.applanga` to our [Android Sample App](https://github.com/applanga/Sample-Apps/tree/main/Android) and/or our [iOS Sample App](https://github.com/applanga/Sample-Apps/tree/main/iOS/UIKit-Cocoapods).
 
 ## Start the Appium Server
 There are several ways to start the Appium server.
-In this repository we use npm to install all dependencies locally.
+In this repository, we use npm to install all dependencies locally.
 
 Go into `AppiumTests` and run `npm install`.
 Then start the Appium server with `npx appium`.
@@ -37,7 +35,7 @@ You can upload your missing strings as described in our [Applanga Android SDK Do
 
 Now you can run the tests via your IDE or inside `AppiumTests` with `./gradlew test --tests appiumtests.android.AndroidTests`
 
-After the test has passed successfully, go to your Applanga dashboard and look for the screenshot.
+After the test has passed successfully, go to your Applanga project in the dashboard and look for the screenshot in the "Screens" panel in the editor.
 The tag is called `Home-Android` and you should see you linked strings there.
 
 ## Run the Appium iOS Tests
