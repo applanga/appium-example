@@ -1,4 +1,4 @@
-# Appium + Applanga SDK Example
+# Appium & Mobile App with Applanga SDK Example
 
 Appium is used for testing mobile apps.
 Within a test you can now trigger a screenshot capture and its upload to the Applanga dashboard.
