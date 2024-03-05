@@ -1,4 +1,5 @@
-# Automatic localization and screenshot generation with Applanga and Appium
+# Appium plus App integrated via Applanga CLI Example
+
 
 ## What is Applanga?
 Applanga is a set of tools used for localizing (translating) web and mobile applications. 
