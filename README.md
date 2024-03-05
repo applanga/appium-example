@@ -33,5 +33,5 @@ Apps may have many screens and menus, and manually going through an app to take 
 With Appium and Applanga combined, as shown in the examples stored in this repo, it is possible to automate this process completely. For example, after the initial scripts are written, you could take 20 screenshots in 20 languages simply by running a script and letting it work in the background on a timer whenever you detect changes on Applanga (e.g. via webhook). 
 
 
-# Applanga Appium Integration
+## Applanga Appium Integration
 If you want to integrate Applanga into an existing or new Appium setup please check out the [applanga-appium](https://github.com/applanga/applanga-appium) repository
