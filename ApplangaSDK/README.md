@@ -2,7 +2,7 @@
 
 In this example, the Appium framework is used to run a test script that navigates through a mobile app integrated with the Applanga mobile SDKs. Within the Appium test script, you can trigger a screenshot capture and upload it to the connected Applanga project. 
 
-This functionality is supported with the **Applanga Android SDK Version 4.0.x** and above and **Applanga iOS SDK Version 3.0.x** and above.
+This functionality is supported with the **Applanga Android SDK Version 4.0.200** and above and **Applanga iOS SDK Version 2.0.184** and above.
 
 # Setup
 This directory is divided into the Appium test scripts in `AppiumTests` and our sample apps imported as a submodule in `Sample-Apps`.
