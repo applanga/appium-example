@@ -1,21 +1,19 @@
 {
   "app": {
-    "access_token": "xxxx",
-    "base_language": "en",
+    "access_token": "xxx",
+    "base_language": "en-US",
     "pull": {
       "target": [
         {
-    	  "includeInvisibleId": true,
           "export_empty": true,
           "file_format": "android_xml",
-          "language": "en",
+          "language": "en-US",
           "path": "./WeatherApp/app/src/main/res/values/strings.xml",
           "tag": "app:strings.xml"
         },
         {
-    	  "includeInvisibleId": true,
           "exclude_languages": [
-            "en"
+            "en-US"
           ],
           "file_format": "android_xml",
           "path": "./WeatherApp/app/src/main/res/values-<language>/strings.xml",
@@ -27,13 +25,13 @@
       "source": [
         {
           "file_format": "android_xml",
-          "language": "en",
+          "language": "en-US",
           "path": "./WeatherApp/app/src/main/res/values/strings.xml",
           "tag": "app:strings.xml"
         },
         {
           "exclude_languages": [
-            "en"
+            "en-US"
           ],
           "file_format": "android_xml",
           "path": "./WeatherApp/app/src/main/res/values-<language>/strings.xml",
