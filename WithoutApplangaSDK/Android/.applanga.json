@@ -5,6 +5,7 @@
     "pull": {
       "target": [
         {
+	  "includeInvisibleId": true,
           "export_empty": true,
           "file_format": "android_xml",
           "language": "en-US",
@@ -12,6 +13,7 @@
           "tag": "app:strings.xml"
         },
         {
+          "includeInvisibleId": true,
           "exclude_languages": [
             "en-US"
           ],
