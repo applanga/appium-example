@@ -14,6 +14,7 @@ function getOptions(country, language) {
       'appium:appPackage': 'com.applanga.weathersample',
       'appium:appActivity': 'com.applanga.weathersample.MainActivity',
       'appium:automationName': 'UiAutomator2',
+      'appium:fullReset': 'true'
     },
   };
   return androidOptions;

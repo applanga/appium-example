@@ -5,14 +5,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:exported="false"
     android:orientation="vertical"
-    tools:context=".fragments.AboutFragment"
-    android:exported="false">
+    tools:context=".fragments.AboutFragment">
 
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -31,9 +32,9 @@
                 android:id="@+id/about_app_header"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Weather-App"
-                android:textAlignment="center"
                 android:gravity="center"
+                android:text="@string/about_app_header"
+                android:textAlignment="center"
                 android:textSize="24sp"
                 tools:text="Weather-App" />
 
@@ -41,25 +42,25 @@
                 android:id="@+id/about_app_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Weather-App is a simple tool to help you find out what's the weather like in your desired location"
-                android:textAlignment="center"
                 android:gravity="center"
-                android:textSize="20sp"
-                tools:text="Weather-App is a simple tool to help you find out what's the weather like in your desired location" />
+                android:text="@string/about_app_text"
+                android:textAlignment="center"
+                android:textSize="20sp" />
 
             <ImageView
                 android:id="@+id/imageView2"
                 android:layout_width="match_parent"
                 android:layout_height="180dp"
+                android:importantForAccessibility="no"
                 android:src="@drawable/city" />
 
             <TextView
                 android:id="@+id/about_features_header"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Features"
-                android:textAlignment="center"
                 android:gravity="center"
+                android:text="@string/about_features_header"
+                android:textAlignment="center"
                 android:textSize="24sp"
                 tools:text="Features" />
 
@@ -67,26 +68,25 @@
                 android:id="@+id/about_features_text_first"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Get a detailed report of the weather in your current location or get a daily temperature report by time and date"
-                android:textAlignment="center"
                 android:gravity="center"
-                android:textSize="20sp"
-                tools:text="Get a detailed report of the weather in your current location or get a daily temperature report by time and date" />
+                android:text="@string/about_features_text_first"
+                android:textAlignment="center"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/about_features_text_second"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Displayed information is based on the location (city based) you provide"
-                android:textAlignment="center"
                 android:gravity="center"
-                android:textSize="20sp"
-                tools:text="Displayed information is based on the location (city based) you provide" />
+                android:text="@string/about_features_text_second"
+                android:textAlignment="center"
+                android:textSize="20sp" />
 
             <ImageView
                 android:id="@+id/imageView3"
                 android:layout_width="match_parent"
                 android:layout_height="180dp"
+                android:importantForAccessibility="no"
                 android:src="@drawable/calendar"
                 tools:ignore="ImageContrastCheck" />
 
@@ -94,9 +94,9 @@
                 android:id="@+id/about_display_header"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Display"
-                android:textAlignment="center"
                 android:gravity="center"
+                android:text="@string/about_display_header"
+                android:textAlignment="center"
                 android:textSize="24sp"
                 tools:text="Display" />
 
@@ -104,34 +104,34 @@
                 android:id="@+id/about_display_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="A simple UI designed to give you the most important information in the easiest way"
-                android:textAlignment="center"
                 android:gravity="center"
-                android:textSize="20sp"
-                tools:text="A simple UI designed to give you the most important information in the easiest way" />
+                android:text="@string/about_display_text"
+                android:textAlignment="center"
+                android:textSize="20sp" />
 
             <ImageView
                 android:id="@+id/imageView4"
                 android:layout_width="match_parent"
                 android:layout_height="180dp"
+                android:importantForAccessibility="no"
                 android:src="@drawable/settings" />
 
             <TextView
                 android:id="@+id/about_customize_header"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Customize"
-                android:textAlignment="center"
                 android:gravity="center"
+                android:text="@string/about_customize_header"
+                android:textAlignment="center"
                 android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/about_customize_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Use the settings window to change the displayed location, preferred measurement unit, app language and number of displayed days"
-                android:textAlignment="center"
                 android:gravity="center"
+                android:text="@string/about_customize_text"
+                android:textAlignment="center"
                 android:textSize="20sp" />
         </LinearLayout>
     </ScrollView>
