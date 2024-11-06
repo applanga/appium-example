@@ -26,12 +26,14 @@
     "push": {
       "source": [
         {
+	  "keepTagIds": true,
           "file_format": "android_xml",
           "language": "en-US",
           "path": "./WeatherApp/app/src/main/res/values/strings.xml",
           "tag": "app:strings.xml"
         },
         {
+	  "keepTagIds": true,
           "exclude_languages": [
             "en-US"
           ],
