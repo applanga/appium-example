@@ -14,7 +14,22 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
+        <TextView
+            android:id="@+id/daily_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@string/home_title_hello"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:padding="8dp"
+            />
         <TextView
             android:id="@+id/daily_days_display"
             android:layout_width="match_parent"
@@ -26,8 +41,9 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/daily_title"
             tools:text="displaying number of days" />
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/daily_recycler_view"

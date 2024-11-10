@@ -100,19 +100,5 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/spacing_xl"/>
 
-        <Button
-            android:id="@+id/settings_save_btn"
-            style="@style/settings_item"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/settings_save_changes_btn"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:paddingBottom="@dimen/spacing_sm"
-            android:paddingTop="@dimen/spacing_sm"
-            android:paddingRight="@dimen/spacing_md"
-            android:paddingLeft="@dimen/spacing_md"
-            />
     </LinearLayout>
 </layout>

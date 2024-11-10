@@ -24,7 +24,7 @@
             app:itemBackground="@color/primary_light"
             app:itemIconTint="@color/white"
             app:itemTextColor="@color/white"
-            app:labelVisibilityMode="labeled"
+            app:labelVisibilityMode="unlabeled"
             app:menu="@menu/bottom_nav_menu" />
 
     </RelativeLayout>

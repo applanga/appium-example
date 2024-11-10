@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Weather App</string>
+    <string name="nav_header_subtitle">Get your local weather now</string>
+    <string name="menu_documentation">Documentation</string>
+    <string name="fragment_settings_title">App Settings</string>
+    <string name="daily_pm">PM</string>
+    <string name="daily_am">AM</string>
+    <string name="about_customize_header">         Customize     </string>
+    <string name="about_customize_text">         Use the settings window to change the displayed location, preferred measurement unit, app language and number of displayed days     </string>
+    <string name="settings_error_toast">Please enter a valid city name</string>
+    <string name="settings_city_placeholder">Enter a city name</string>
+    <string name="settings_saved_toast">Saved settings</string>
+    <string name="description_few_clouds">Few clouds </string>
+    <string name="description_scattered_clouds">Scattered clouds </string>
+    <string name="description_broken_clouds">Broken clouds </string>
+    <string name="description_shower_rain">Shower rain </string>
+    <string name="description_rain">Rain </string>
+    <string name="description_thunderstorm">Thunderstorm </string>
+    <string name="description_snow">Snow </string>
+    <string name="description_mist">Mist </string>
+    <string name="days_tuesday">Tuesday</string>
+    <string name="days_wednesday">Wednesday</string>
+    <string name="days_thursday">Thursday</string>
+    <string name="days_friday">Friday</string>
+    <string name="days_saturday">Saturday</string>
+    <string name="not_available">N/A</string>
+    <string name="month_january">January</string>
+    <string name="month_february">February</string>
+    <string name="month_march">March</string>
+    <string name="month_april">April</string>
+    <string name="month_may">May</string>
+    <string name="month_june">June</string>
+    <string name="month_july">July</string>
+    <string name="month_august">August</string>
+    <string name="month_september">September</string>
+    <string name="month_october">October</string>
+    <string name="month_november">November</string>
+    <string name="month_december">December</string>
+    <string name="error_city_name">Please enter a valid city name</string>
+    <plurals name="daily_day_number">
+        <item quantity="one">Displaying %d day</item>
+        <item quantity="other">Displaying %d days</item>
+    </plurals>
+    <string-array name="settings_language_options">
+        <item>English</item>
+        <item>German</item>
+        <item>Spanish</item>
+    </string-array>
+</resources>
