@@ -76,9 +76,9 @@ class SettingsFragment : androidx.fragment.app.Fragment() {
                 ) - 1
             )
 
-            settingsSaveBtn.setOnClickListener {
-                verifyApiResponse()
-            }
+            // settingsSaveBtn.setOnClickListener {
+            //     verifyApiResponse()
+            // }
             settingsCity.setOnKeyListener { view, keyCode, _ ->
                 hideSoftKeyboardOnEnter(
                     view,
