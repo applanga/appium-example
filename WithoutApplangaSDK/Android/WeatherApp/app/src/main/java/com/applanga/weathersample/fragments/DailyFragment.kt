@@ -50,9 +50,8 @@ class DailyFragment : Fragment() {
         binding.apply {
             dailyRecyclerView.layoutManager = LinearLayoutManager(requireContext())
             dailyRecyclerView.adapter = dailyAdapter
-            dailyDaysDisplay.text = resources.getQuantityString(
-                R.plurals.daily_day_number,
-                displayedDays,
+            dailyDaysDisplay.text = resources.getString(
+                R.string.daily_day_number,
                 displayedDays
             )
         }

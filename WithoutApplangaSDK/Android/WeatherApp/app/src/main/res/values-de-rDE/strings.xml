@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="menu_home">Heim</string>
-    <string name="menu_daily">Tägliche Vorhersage</string>
-    <string name="menu_about">Über</string>
-    <string name="menu_settings">Einstellungen</string>
     <string name="home_description_title">Beschreibung</string>
     <string name="home_clouds_title">Wolken</string>
     <string name="home_humidity_title">Feuchtigkeit</string>
@@ -23,9 +19,6 @@
     <string name="settings_imperial_radio">Kaiserlich</string>
     <string name="settings_language_title">App-Sprache</string>
     <string name="settings_days_title">Anzahl der angezeigten Tage</string>
-    <string name="settings_save_changes_btn">Änderungen speichern</string>
     <string name="description_clear_sky">Klarer Himmel </string>
-    <string name="days_sunday">Sonntag</string>
-    <string name="days_monday">Montag</string>
     <string name="settings_default_location">New York</string>
 </resources>
