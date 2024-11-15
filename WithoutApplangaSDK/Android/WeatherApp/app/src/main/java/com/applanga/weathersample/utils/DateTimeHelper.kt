@@ -63,7 +63,7 @@ class DateTimeHelper(val context: Context) {
         val dayName = SimpleDateFormat("EEEE", Locale.ENGLISH).format(format)
         val monthName = SimpleDateFormat("LLLL", Locale.ENGLISH).format(getInstance().time)
 
-        return "${getDayNameFromString(dayName)}, ${getMonthName(monthName)}, ${givenDate.substring(8, 10)}"
+        return "${getDayNameFromString(dayName)},${getMonthName(monthName)},${givenDate.substring(8, 10)}"
     }
 
 }

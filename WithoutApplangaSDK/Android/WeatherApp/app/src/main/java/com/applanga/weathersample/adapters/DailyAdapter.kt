@@ -44,8 +44,8 @@ class DayViewHolder(val context: Context, val binding: ItemDayBinding): Recycler
 
         binding.apply {
             dayItem = day
-            dayDate1.text = dateTimeHelper.getFullDate(day.dt_txt.substring(0, 10)).split(",")[0] + ","
-            dayDate2.text = dateTimeHelper.getFullDate(day.dt_txt.substring(0, 10)).split(",")[1]
+            dayDate1.text = dateTimeHelper.getFullDate(day.dt_txt.substring(0, 10)).split(",")[0] + ", "
+            dayDate2.text = dateTimeHelper.getFullDate(day.dt_txt.substring(0, 10)).split(",")[1] + " "
             dayDate3.text = dateTimeHelper.getFullDate(day.dt_txt.substring(0, 10)).split(",")[2]
             dayTime.text = getTime()
             dayIcon.setImageResource(IconHelper.getWeatherIcon(day.weather[0].icon))
