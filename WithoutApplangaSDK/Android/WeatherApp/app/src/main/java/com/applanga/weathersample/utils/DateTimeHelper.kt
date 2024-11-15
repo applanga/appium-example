@@ -35,7 +35,7 @@ class DateTimeHelper(val context: Context) {
     }
 
     private fun getMonthName(monthNumber: String? = null): String {
-        return when (monthNumber ?: SimpleDateFormat("LLLL").format(getInstance().time)) {
+        return when (monthNumber ?: SimpleDateFormat("LLLL", Locale.ENGLISH).format(getInstance().time)) {
             "January" -> context.resources.getString(R.string.month_january)
             "February" -> context.resources.getString(R.string.month_february)
             "March" -> context.resources.getString(R.string.month_march)
@@ -61,8 +61,9 @@ class DateTimeHelper(val context: Context) {
     fun getFullDate(givenDate: String): String {
         val format = SimpleDateFormat("yyyy-MM-dd").parse(givenDate) as Date
         val dayName = SimpleDateFormat("EEEE", Locale.ENGLISH).format(format)
-        val monthName = SimpleDateFormat("LLLL").format(getInstance().time)
+        val monthName = SimpleDateFormat("LLLL", Locale.ENGLISH).format(getInstance().time)
 
-        return "${getDayNameFromString(dayName)}, ${getMonthName(monthName)} ${givenDate.substring(8, 10)}"
+        return "${getDayNameFromString(dayName)}, ${getMonthName(monthName)}, ${givenDate.substring(8, 10)}"
     }
+
 }

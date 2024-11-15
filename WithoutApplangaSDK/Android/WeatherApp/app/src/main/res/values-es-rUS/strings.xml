@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="menu_home">Hogar</string>
-  <string name="menu_daily">Pronóstico diario</string>
-  <string name="menu_about">Acerca de</string>
-  <string name="menu_settings">Configuración</string>
   <string name="home_description_title">Descripción</string>
   <string name="home_clouds_title">Nubes</string>
   <string name="home_humidity_title">Humedad</string>
@@ -23,9 +19,6 @@
   <string name="settings_imperial_radio">Imperial</string>
   <string name="settings_language_title">Idioma de la aplicación</string>
   <string name="settings_days_title">Número de días mostrados</string>
-  <string name="settings_save_changes_btn">Guardar cambios</string>
   <string name="description_clear_sky">Cielo despejado </string>
-  <string name="days_sunday">Domingo</string>
-  <string name="days_monday">Lunes</string>
   <string name="settings_default_location">Nueva York</string>
 </resources>
