@@ -55,7 +55,7 @@ class DateTimeHelper(val context: Context) {
     fun getCurrentDate(): String {
         val date = getInstance().get(DAY_OF_MONTH)
 
-        return "${getDayNameFromInt()}, ${getMonthName()} $date"
+        return "${getDayNameFromInt()},${getMonthName()},$date"
     }
 
     fun getFullDate(givenDate: String): String {

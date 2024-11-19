@@ -16,9 +16,9 @@ class HomeFragment : Fragment() {
     lateinit var binding: FragmentHomeBinding
 
     override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View {
         binding = FragmentHomeBinding.inflate(inflater)
         setHomeObserver()
@@ -45,7 +45,10 @@ class HomeFragment : Fragment() {
         if (apiResponse != null) {
             binding.apply {
                 homeWeather = apiResponse
-                homeDate.text = DateTimeHelper(requireContext()).getCurrentDate()
+                val currentDate = DateTimeHelper(requireContext()).getCurrentDate()
+                homeDate1.text = currentDate.split(",")[0] + ", "
+                homeDate2.text = currentDate.split(",")[1] + " "
+                homeDate3.text = currentDate.split(",")[2]
                 homeWeatherIcon.setImageResource(IconHelper.getWeatherIcon(apiResponse.weather[0].icon))
             }
         }

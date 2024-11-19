@@ -35,6 +35,8 @@ async function main() {
     const locale = locales[i];
     await navigateAndRunScreenshots(locale.country, locale.language);
   }
+  // go back to first language
+  var client = await wdio.remote(getOptions(locales[0].country, locales[0].language));
 }
 
 async function navigateAndRunScreenshots(country, language) {
@@ -42,6 +44,8 @@ async function navigateAndRunScreenshots(country, language) {
   var tagName = 'home';
   let progressBar = await client.$(getSelectorByResourceId('home_progress_bar_spinner'))
   await progressBar.waitForExist({ timeout: 5000, reverse: true }); 
+  // wait for the status bar to disappear
+  await client.pause(1500);
   for (let j = 0; j < buttonsToPressAndroid.length + 1; j++) {
     await applanga.captureScreenshot(
       client,
@@ -64,6 +68,7 @@ function getSelectorByResourceId(resourceId) {
 async function pressButtons(client, btnName) {
   let button = await client.$(getSelectorByResourceId(btnName));
   await button.waitForExist({ timeout: 5000 }); // Wait up to 5 seconds for the element to exist
+  await client.pause(500);
   button.click();
 }
 

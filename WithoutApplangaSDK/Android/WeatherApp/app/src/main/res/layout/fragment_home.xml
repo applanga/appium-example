@@ -17,6 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/fragment_gradient"
+        android:paddingTop="16dp"
         tools:context=".fragments.HomeFragment">
 
                         <com.google.android.material.imageview.ShapeableImageView
@@ -84,17 +85,43 @@
                 tools:text="location" />
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/home_date"
-            style="@style/home_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:textAlignment="center"
+        <LinearLayout
+            android:id="@+id/home_date0"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-            tools:text="Thursday, May 27" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/home_date1"
+                style="@style/home_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textAlignment="center"
+                android:layout_gravity="center_horizontal"
+                tools:text="Thursday, " />
+            <TextView
+                android:id="@+id/home_date2"
+                style="@style/home_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textAlignment="center"
+                android:layout_gravity="center_horizontal"
+                tools:text="May " />
+            <TextView
+                android:id="@+id/home_date3"
+                style="@style/home_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textAlignment="center"
+                android:layout_gravity="center_horizontal"
+                tools:text="27" />
+        </LinearLayout>
+
 
         <TextView
             android:id="@+id/home_temperature"
@@ -107,7 +134,7 @@
             app:doubleToInt="@{homeWeather.main.temp}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/home_date"
+            app:layout_constraintTop_toBottomOf="@+id/home_date0"
             tools:text="Deg" />
 
         <ImageView
